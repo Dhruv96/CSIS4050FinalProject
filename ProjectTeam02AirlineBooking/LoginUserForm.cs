@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AirlineBookingCodeFirstFromDB;
 
 namespace ProjectTeam02AirlineBooking
 {
     public partial class LoginUserForm : Form
     {
+        AirlineEntities context;
         public LoginUserForm()
         {
             InitializeComponent();
+            context = new AirlineEntities();
+            context.SeedDatabase();
             buttonLoginAsPassenger.Click += ButtonLoginAsPassenger_Click;
         }
 
