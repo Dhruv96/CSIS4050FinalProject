@@ -9,12 +9,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProjectTeam02AirlineBooking</RootNamespace>
     <AssemblyName>ProjectTeam02AirlineBooking</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -84,6 +85,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -100,10 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Downloads\Lab08StudentRegistration\Lab08StudentRegistration\EFControllerUtilities\EFControllerUtilities.csproj">
-      <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
-      <Name>EFControllerUtilities</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AirlineBookingCodeFirstFromDB\AirlineBookingCodeFirstFromDB.csproj">
       <Project>{a6d3640a-a4ff-4f63-8df1-ce22f428d1c4}</Project>
       <Name>AirlineBookingCodeFirstFromDB</Name>
@@ -111,6 +109,10 @@
     <ProjectReference Include="..\AirlinesDB\AirlinesDB.sqlproj">
       <Project>{d8b904a3-478c-4399-ba30-efda541d88c3}</Project>
       <Name>AirlinesDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFControllerUtilities\EFControllerUtilities.csproj">
+      <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
+      <Name>EFControllerUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
