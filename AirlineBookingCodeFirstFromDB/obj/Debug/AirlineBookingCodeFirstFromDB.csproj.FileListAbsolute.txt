@@ -10,3 +10,15 @@ C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlineBookingCodeFirstF
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.csproj.CopyComplete
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.dll
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.pdb
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\AirlineBookingCodeFirstFromDB.dll.config
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\AirlineBookingCodeFirstFromDB.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\AirlineBookingCodeFirstFromDB.pdb
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\EntityFramework.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\EntityFramework.xml
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.csprojAssemblyReference.cache
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.csproj.CoreCompileInputs.cache
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.csproj.CopyComplete
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlineBookingCodeFirstFromDB\obj\Debug\AirlineBookingCodeFirstFromDB.pdb

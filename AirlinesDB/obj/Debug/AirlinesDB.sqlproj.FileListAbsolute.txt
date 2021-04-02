@@ -8,3 +8,9 @@ C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\Mod
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\refactor.xml
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\postdeploy.sql
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\predeploy.sql
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.dacpac
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.pdb
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\obj\Debug\AirlinesDB.sqlprojAssemblyReference.cache
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\obj\Debug\AirlinesDB.dll
+C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\obj\Debug\AirlinesDB.pdb
