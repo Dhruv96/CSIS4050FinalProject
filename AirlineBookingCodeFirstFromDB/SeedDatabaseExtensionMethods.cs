@@ -107,60 +107,59 @@ namespace AirlineBookingCodeFirstFromDB
 
                 new Flight{FlightId=19, AirlineId=7, DepartureAirport=7, DestinationAirport=6, FlightDate = new DateTime(2021,04,10,10,40,00), Price = 767, NumSeats = 20},
                 new Flight{FlightId=20, AirlineId=7, DepartureAirport=7, DestinationAirport=3, FlightDate = new DateTime(2021,04,11,09,15,00), Price = 955, NumSeats = 20},
-                new Flight{FlightId=1, AirlineId=7, DepartureAirport=7, DestinationAirport=5, FlightDate = new DateTime(2021,04,12,06,33,00), Price = 878, NumSeats = 20},
+                new Flight{FlightId=21, AirlineId=7, DepartureAirport=7, DestinationAirport=5, FlightDate = new DateTime(2021,04,12,06,33,00), Price = 878, NumSeats = 20},
 
-                new Flight{FlightId=2, AirlineId=8, DepartureAirport=8, DestinationAirport=9, FlightDate = new DateTime(2021,04,21,11,20,00), Price = 1234, NumSeats = 20},
-                new Flight{FlightId=3, AirlineId=8, DepartureAirport=8, DestinationAirport=2, FlightDate = new DateTime(2021,04,15,21,10,00), Price = 1314, NumSeats = 20},
-                new Flight{FlightId=4, AirlineId=8, DepartureAirport=8, DestinationAirport=4, FlightDate = new DateTime(2021,04,20,16,50,00), Price = 1421, NumSeats = 20},
+                new Flight{FlightId=22, AirlineId=8, DepartureAirport=8, DestinationAirport=9, FlightDate = new DateTime(2021,04,21,11,20,00), Price = 1234, NumSeats = 20},
+                new Flight{FlightId=23, AirlineId=8, DepartureAirport=8, DestinationAirport=2, FlightDate = new DateTime(2021,04,15,21,10,00), Price = 1314, NumSeats = 20},
+                new Flight{FlightId=24, AirlineId=8, DepartureAirport=8, DestinationAirport=4, FlightDate = new DateTime(2021,04,20,16,50,00), Price = 1421, NumSeats = 20},
 
-                new Flight{FlightId=5, AirlineId=9, DepartureAirport=9, DestinationAirport=10, FlightDate = new DateTime(2021,04,18,15,45,00), Price = 1365, NumSeats = 20},
-                new Flight{FlightId=6, AirlineId=9, DepartureAirport=9, DestinationAirport=1, FlightDate = new DateTime(2021,04,17,12,45,00), Price = 1135, NumSeats = 20},
-                new Flight{FlightId=7, AirlineId=9, DepartureAirport=9, DestinationAirport=2, FlightDate = new DateTime(2021,04,24,14,15,00), Price = 1245, NumSeats = 20},
+                new Flight{FlightId=25, AirlineId=9, DepartureAirport=9, DestinationAirport=10, FlightDate = new DateTime(2021,04,18,15,45,00), Price = 1365, NumSeats = 20},
+                new Flight{FlightId=26, AirlineId=9, DepartureAirport=9, DestinationAirport=1, FlightDate = new DateTime(2021,04,17,12,45,00), Price = 1135, NumSeats = 20},
+                new Flight{FlightId=27, AirlineId=9, DepartureAirport=9, DestinationAirport=2, FlightDate = new DateTime(2021,04,24,14,15,00), Price = 1245, NumSeats = 20},
 
-                new Flight{FlightId=8, AirlineId=10, DepartureAirport=10, DestinationAirport=11, FlightDate = new DateTime(2021,04,16,18,50,00), Price = 1469, NumSeats = 20},
-                new Flight{FlightId=9, AirlineId=10, DepartureAirport=10, DestinationAirport=17, FlightDate = new DateTime(2021,04,22,1,10,00), Price = 1239, NumSeats = 20},
-                new Flight{FlightId=10, AirlineId=10, DepartureAirport=10, DestinationAirport=18, FlightDate = new DateTime(2021,04,23,2,10,00), Price = 1390, NumSeats = 20},
+                new Flight{FlightId=28, AirlineId=10, DepartureAirport=10, DestinationAirport=11, FlightDate = new DateTime(2021,04,16,18,50,00), Price = 1469, NumSeats = 20},
+                new Flight{FlightId=29, AirlineId=10, DepartureAirport=10, DestinationAirport=17, FlightDate = new DateTime(2021,04,22,1,10,00), Price = 1239, NumSeats = 20},
+                new Flight{FlightId=30, AirlineId=10, DepartureAirport=10, DestinationAirport=18, FlightDate = new DateTime(2021,04,23,2,10,00), Price = 1390, NumSeats = 20},
 
-                new Flight{FlightId=11, AirlineId=11, DepartureAirport=11, DestinationAirport=12, FlightDate = new DateTime(2021,04,13,23,20,00), Price = 1132, NumSeats = 20},
-                new Flight{FlightId=12, AirlineId=11, DepartureAirport=11, DestinationAirport=16, FlightDate = new DateTime(2021,04,11,20,40,00), Price = 1152, NumSeats = 20},
-                new Flight{FlightId=13, AirlineId=11, DepartureAirport=11, DestinationAirport=15, FlightDate = new DateTime(2021,04,10,18,30,00), Price = 1112, NumSeats = 20},
+                new Flight{FlightId=31, AirlineId=11, DepartureAirport=11, DestinationAirport=12, FlightDate = new DateTime(2021,04,13,23,20,00), Price = 1132, NumSeats = 20},
+                new Flight{FlightId=32, AirlineId=11, DepartureAirport=11, DestinationAirport=16, FlightDate = new DateTime(2021,04,11,20,40,00), Price = 1152, NumSeats = 20},
+                new Flight{FlightId=33, AirlineId=11, DepartureAirport=11, DestinationAirport=15, FlightDate = new DateTime(2021,04,10,18,30,00), Price = 1112, NumSeats = 20},
 
-                new Flight{FlightId=14, AirlineId=12, DepartureAirport=12, DestinationAirport=13, FlightDate = new DateTime(2021,04,14,22,25,00), Price = 1274, NumSeats = 20},
-                new Flight{FlightId=15, AirlineId=12, DepartureAirport=12, DestinationAirport=14, FlightDate = new DateTime(2021,04,18,00,15,00), Price = 1572, NumSeats = 20},
-                new Flight{FlightId=16, AirlineId=12, DepartureAirport=12, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,11,35,00), Price = 1138, NumSeats = 20},
+                new Flight{FlightId=34, AirlineId=12, DepartureAirport=12, DestinationAirport=13, FlightDate = new DateTime(2021,04,14,22,25,00), Price = 1274, NumSeats = 20},
+                new Flight{FlightId=35, AirlineId=12, DepartureAirport=12, DestinationAirport=14, FlightDate = new DateTime(2021,04,18,00,15,00), Price = 1572, NumSeats = 20},
+                new Flight{FlightId=36, AirlineId=12, DepartureAirport=12, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,11,35,00), Price = 1138, NumSeats = 20},
 
-                new Flight{FlightId=17, AirlineId=13, DepartureAirport=13, DestinationAirport=14, FlightDate = new DateTime(2021,04,10,1,15,00), Price = 1089, NumSeats = 20},
-                new Flight{FlightId=18, AirlineId=13, DepartureAirport=13, DestinationAirport=12, FlightDate = new DateTime(2021,04,12,15,35,00), Price = 859, NumSeats = 20},
-                new Flight{FlightId=19, AirlineId=13, DepartureAirport=13, DestinationAirport=20, FlightDate = new DateTime(2021,04,14,18,45,00), Price = 845, NumSeats = 20},
+                new Flight{FlightId=37, AirlineId=13, DepartureAirport=13, DestinationAirport=14, FlightDate = new DateTime(2021,04,10,1,15,00), Price = 1089, NumSeats = 20},
+                new Flight{FlightId=38, AirlineId=13, DepartureAirport=13, DestinationAirport=12, FlightDate = new DateTime(2021,04,12,15,35,00), Price = 859, NumSeats = 20},
+                new Flight{FlightId=39, AirlineId=13, DepartureAirport=13, DestinationAirport=20, FlightDate = new DateTime(2021,04,14,18,45,00), Price = 845, NumSeats = 20},
 
-                new Flight{FlightId=20, AirlineId=14, DepartureAirport=14, DestinationAirport=15, FlightDate = new DateTime(2021,04,12,21,30,00), Price = 1455, NumSeats = 20},
-                new Flight{FlightId=1, AirlineId=14, DepartureAirport=14, DestinationAirport=16, FlightDate = new DateTime(2021,04,13,22,40,00), Price = 1253, NumSeats = 20},
-                new Flight{FlightId=2, AirlineId=14, DepartureAirport=14, DestinationAirport=17, FlightDate = new DateTime(2021,04,16,2,50,00), Price = 1145, NumSeats = 20},
+                new Flight{FlightId=40, AirlineId=14, DepartureAirport=14, DestinationAirport=15, FlightDate = new DateTime(2021,04,12,21,30,00), Price = 1455, NumSeats = 20},
+                new Flight{FlightId=41, AirlineId=14, DepartureAirport=14, DestinationAirport=16, FlightDate = new DateTime(2021,04,13,22,40,00), Price = 1253, NumSeats = 20},
+                new Flight{FlightId=42, AirlineId=14, DepartureAirport=14, DestinationAirport=17, FlightDate = new DateTime(2021,04,16,2,50,00), Price = 1145, NumSeats = 20},
 
-                new Flight{FlightId=3, AirlineId=15, DepartureAirport=15, DestinationAirport=16, FlightDate = new DateTime(2021,04,16,4,40,00), Price = 989, NumSeats = 20},
-                new Flight{FlightId=4, AirlineId=15, DepartureAirport=15, DestinationAirport=14, FlightDate = new DateTime(2021,04,11,14,20,00), Price = 1039, NumSeats = 20},
-                new Flight{FlightId=5, AirlineId=15, DepartureAirport=15, DestinationAirport=11, FlightDate = new DateTime(2021,04,19,21,40,00), Price = 1057, NumSeats = 20},
+                new Flight{FlightId=43, AirlineId=15, DepartureAirport=15, DestinationAirport=16, FlightDate = new DateTime(2021,04,16,4,40,00), Price = 989, NumSeats = 20},
+                new Flight{FlightId=44, AirlineId=15, DepartureAirport=15, DestinationAirport=14, FlightDate = new DateTime(2021,04,11,14,20,00), Price = 1039, NumSeats = 20},
+                new Flight{FlightId=45, AirlineId=15, DepartureAirport=15, DestinationAirport=11, FlightDate = new DateTime(2021,04,19,21,40,00), Price = 1057, NumSeats = 20},
 
-                new Flight{FlightId=6, AirlineId=16, DepartureAirport=16, DestinationAirport=17, FlightDate = new DateTime(2021,04,19,20,10,00), Price = 1170, NumSeats = 20},
-                new Flight{FlightId=7, AirlineId=16, DepartureAirport=16, DestinationAirport=12, FlightDate = new DateTime(2021,04,15,19,20,00), Price = 1120, NumSeats = 20},
-                new Flight{FlightId=8, AirlineId=16, DepartureAirport=16, DestinationAirport=18, FlightDate = new DateTime(2021,04,18,17,50,00), Price = 1150, NumSeats = 20},
+                new Flight{FlightId=46, AirlineId=16, DepartureAirport=16, DestinationAirport=17, FlightDate = new DateTime(2021,04,19,20,10,00), Price = 1170, NumSeats = 20},
+                new Flight{FlightId=47, AirlineId=16, DepartureAirport=16, DestinationAirport=12, FlightDate = new DateTime(2021,04,15,19,20,00), Price = 1120, NumSeats = 20},
+                new Flight{FlightId=48, AirlineId=16, DepartureAirport=16, DestinationAirport=18, FlightDate = new DateTime(2021,04,18,17,50,00), Price = 1150, NumSeats = 20},
 
-                new Flight{FlightId=9, AirlineId=17, DepartureAirport=17, DestinationAirport=13, FlightDate = new DateTime(2021,04,17,17,40,00), Price = 1120, NumSeats = 20},
-                new Flight{FlightId=10, AirlineId=17, DepartureAirport=17, DestinationAirport=14, FlightDate = new DateTime(2021,04,18,17,40,00), Price = 1240, NumSeats = 20},
-                new Flight{FlightId=11, AirlineId=17, DepartureAirport=17, DestinationAirport=19, FlightDate = new DateTime(2021,04,20,17,40,00), Price = 1180, NumSeats = 20},
+                new Flight{FlightId=49, AirlineId=17, DepartureAirport=17, DestinationAirport=13, FlightDate = new DateTime(2021,04,17,17,40,00), Price = 1120, NumSeats = 20},
+                new Flight{FlightId=50, AirlineId=17, DepartureAirport=17, DestinationAirport=14, FlightDate = new DateTime(2021,04,18,17,40,00), Price = 1240, NumSeats = 20},
+                new Flight{FlightId=51, AirlineId=17, DepartureAirport=17, DestinationAirport=19, FlightDate = new DateTime(2021,04,20,17,40,00), Price = 1180, NumSeats = 20},
 
-                new Flight{FlightId=12, AirlineId=18, DepartureAirport=18, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,14,10,00), Price = 930, NumSeats = 20},
-                new Flight{FlightId=13, AirlineId=18, DepartureAirport=18, DestinationAirport=20, FlightDate = new DateTime(2021,04,13,15,10,00), Price = 890, NumSeats = 20},
-                new Flight{FlightId=14, AirlineId=18, DepartureAirport=18, DestinationAirport=14, FlightDate = new DateTime(2021,04,11,18,10,00), Price = 870, NumSeats = 20},
+                new Flight{FlightId=52, AirlineId=18, DepartureAirport=18, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,14,10,00), Price = 930, NumSeats = 20},
+                new Flight{FlightId=53, AirlineId=18, DepartureAirport=18, DestinationAirport=20, FlightDate = new DateTime(2021,04,13,15,10,00), Price = 890, NumSeats = 20},
+                new Flight{FlightId=54, AirlineId=18, DepartureAirport=18, DestinationAirport=14, FlightDate = new DateTime(2021,04,11,18,10,00), Price = 870, NumSeats = 20},
 
-                new Flight{FlightId=15, AirlineId=19, DepartureAirport=19, DestinationAirport=16, FlightDate = new DateTime(2021,04,21,15,15,00), Price = 879, NumSeats = 20},
-                new Flight{FlightId=16, AirlineId=19, DepartureAirport=19, DestinationAirport=17, FlightDate = new DateTime(2021,04,20,14,35,00), Price = 849, NumSeats = 20},
-                new Flight{FlightId=17, AirlineId=19, DepartureAirport=19, DestinationAirport=12, FlightDate = new DateTime(2021,04,18,12,55,00), Price = 979, NumSeats = 20},
+                new Flight{FlightId=55, AirlineId=19, DepartureAirport=19, DestinationAirport=16, FlightDate = new DateTime(2021,04,21,15,15,00), Price = 879, NumSeats = 20},
+                new Flight{FlightId=56, AirlineId=19, DepartureAirport=19, DestinationAirport=17, FlightDate = new DateTime(2021,04,20,14,35,00), Price = 849, NumSeats = 20},
+                new Flight{FlightId=57, AirlineId=19, DepartureAirport=19, DestinationAirport=12, FlightDate = new DateTime(2021,04,18,12,55,00), Price = 979, NumSeats = 20},
 
-                new Flight{FlightId=18, AirlineId=20, DepartureAirport=20, DestinationAirport=11, FlightDate = new DateTime(2021,04,14,05,20,00), Price = 1356, NumSeats = 20},
-                new Flight{FlightId=19, AirlineId=20, DepartureAirport=20, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,07,30,00), Price = 1236, NumSeats = 20},
-                new Flight{FlightId=20, AirlineId=20, DepartureAirport=20, DestinationAirport=15, FlightDate = new DateTime(2021,04,19,06,40,00), Price = 1116, NumSeats = 20},
->>>>>>> cd3bbd23d0f1a43bc3f5b3127f80ce1c795bc811
+                new Flight{FlightId=58, AirlineId=20, DepartureAirport=20, DestinationAirport=11, FlightDate = new DateTime(2021,04,14,05,20,00), Price = 1356, NumSeats = 20},
+                new Flight{FlightId=59, AirlineId=20, DepartureAirport=20, DestinationAirport=19, FlightDate = new DateTime(2021,04,16,07,30,00), Price = 1236, NumSeats = 20},
+                new Flight{FlightId=60, AirlineId=20, DepartureAirport=20, DestinationAirport=15, FlightDate = new DateTime(2021,04,19,06,40,00), Price = 1116, NumSeats = 20}
             };
 
             //Seats in each flight
@@ -632,9 +631,7 @@ namespace AirlineBookingCodeFirstFromDB
                 context.Airports.AddRange(airports);
                 context.Airlines.AddRange(airlines);
                 context.Flights.AddRange(flights);
-                context.Bookings.AddRange(bookings);
-                context.Passengers.AddRange(passengers);
-                context.FlightBookings.AddRange(flightBooking);
+                context.SaveChanges();
                 context.Passengers.AddRange(passengers);
                 context.Seats.AddRange(seats);
                 context.SaveChanges();
