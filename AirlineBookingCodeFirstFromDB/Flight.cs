@@ -5,6 +5,8 @@ namespace AirlineBookingCodeFirstFromDB
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using AirlineBookingCodeFirstFromDB;
+    using EFControllerUtilities;
 
     [Table("Flight")]
     public partial class Flight
@@ -37,5 +39,48 @@ namespace AirlineBookingCodeFirstFromDB
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Seat> Seats { get; set; }
+
+        public String GetAirline()
+        {
+            var airlines = Controller<AirlineEntities, Airline>.SetBindingList();
+            foreach(var airline in airlines)
+            {
+                if (AirlineId == airline.AirlineId)
+                    return airline.AirlineName;
+                else
+                    continue;
+            }
+            return "";
+        }
+
+        public String GetDepartureAirport()
+        {
+            var airports = Controller<AirlineEntities, Airport>.SetBindingList();
+            foreach(var airport in airports)
+            {
+                if (airport.AirportId == DepartureAirport)
+                    return airport.AirportName;
+                else
+                    continue;
+
+            }
+
+            return "";
+        }
+
+        public String GetDestinationAirport()
+        {
+            var airports = Controller<AirlineEntities, Airport>.SetBindingList();
+            foreach (var airport in airports)
+            {
+                if (airport.AirportId == DestinationAirport)
+                    return airport.AirportName;
+                else
+                    continue;
+
+            }
+
+            return "";
+        }
     }
 }

@@ -4,10 +4,6 @@ C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\bin\Debug\Air
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\AirlinesDB.sqlprojAssemblyReference.cache
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\AirlinesDB.dll
 C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\AirlinesDB.pdb
-C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\Model.xml
-C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\refactor.xml
-C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\postdeploy.sql
-C:\Users\Dhruv\source\repos\ProjectTeam02AirlineBooking\AirlinesDB\obj\Debug\predeploy.sql
 C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.dacpac
 C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.dll
 C:\Users\prana\Desktop\CSIS4050FinalProject\AirlinesDB\bin\Debug\AirlinesDB.pdb
