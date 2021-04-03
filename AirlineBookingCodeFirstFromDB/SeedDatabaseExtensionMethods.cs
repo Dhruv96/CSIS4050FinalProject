@@ -98,6 +98,7 @@ namespace AirlineBookingCodeFirstFromDB
                 new Flight{FlightId=18, AirlineId=18, DepartureAirport=18, DestinationAirport=19, FlightDate = new DateTime(2021,04,02,1,50,00), Price = 930, NumSeats = 20},
                 new Flight{FlightId=19, AirlineId=19, DepartureAirport=19, DestinationAirport=20, FlightDate = new DateTime(2021,04,02,1,50,00), Price = 879, NumSeats = 20},
                 new Flight{FlightId=20, AirlineId=20, DepartureAirport=20, DestinationAirport=1, FlightDate = new DateTime(2021,04,02,1,50,00), Price = 1356, NumSeats = 20},
+                new Flight{FlightId=21, AirlineId=1, DepartureAirport=2, DestinationAirport=1, FlightDate = new DateTime(2021,04,24,1,50,00), Price = 933, NumSeats = 20}
             };
 
             List<Seat> seats = new List<Seat>()
@@ -145,7 +146,7 @@ namespace AirlineBookingCodeFirstFromDB
             {
                 context.Airports.AddRange(airports);
                 context.Airlines.AddRange(airlines);
-                //context.Flights.AddRange(flights);
+                context.Flights.AddRange(flights);
                 context.Bookings.AddRange(bookings);
                 context.Passengers.AddRange(passengers);
                 context.FlightBookings.AddRange(flightBooking);

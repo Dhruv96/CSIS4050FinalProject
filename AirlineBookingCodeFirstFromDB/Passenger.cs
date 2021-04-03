@@ -13,11 +13,11 @@ namespace AirlineBookingCodeFirstFromDB
         public int PassengerId { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(25)]
         public string FirstName { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(25)]
         public string LastName { get; set; }
 
         [Required]
@@ -25,7 +25,7 @@ namespace AirlineBookingCodeFirstFromDB
         public string Gender { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(50)]
         public string Email { get; set; }
     }
 }
