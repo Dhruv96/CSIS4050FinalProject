@@ -16,7 +16,7 @@ namespace ProjectTeam02AirlineBooking
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginUserForm());
+            Application.Run(new LoginForm());
         }
     }
 }
