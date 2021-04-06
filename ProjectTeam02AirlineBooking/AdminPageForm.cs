@@ -17,11 +17,13 @@ namespace ProjectTeam02AirlineBooking
             InitializeComponent();
 
             //Button click event handler
+            buttonManageFlights.Click += ButtonManageFlights_Click;
             buttonManageBookings.Click += ButtonManageBookings_Click;
-            buttonManageBookings.Click += ButtonManageBookings_Click1;
             buttonBackToLoginForm.Click += ButtonBackToLoginForm_Click;
 
         }
+
+     
 
         private void ButtonBackToLoginForm_Click(object sender, EventArgs e)
         {
@@ -33,8 +35,8 @@ namespace ProjectTeam02AirlineBooking
 
             this.Close();
         }
-
-        private void ButtonManageBookings_Click1(object sender, EventArgs e)
+        
+        private void ButtonManageBookings_Click(object sender, EventArgs e)
         {
             this.Visible = false;
 
@@ -45,7 +47,7 @@ namespace ProjectTeam02AirlineBooking
             this.Close();
         }
 
-        private void ButtonManageBookings_Click(object sender, EventArgs e)
+        private void ButtonManageFlights_Click(object sender, EventArgs e)
         {
             this.Visible = false;
 
