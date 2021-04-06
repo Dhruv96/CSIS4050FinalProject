@@ -29,7 +29,7 @@ namespace ProjectTeam02AirlineBooking
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBoxFlightManage = new System.Windows.Forms.ListBox();
+            this.listBoxFlightsManage = new System.Windows.Forms.ListBox();
             this.labelFlightId = new System.Windows.Forms.Label();
             this.textBoxFlightId = new System.Windows.Forms.TextBox();
             this.labelAirlineId = new System.Windows.Forms.Label();
@@ -46,21 +46,21 @@ namespace ProjectTeam02AirlineBooking
             this.buttonFlightUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBoxFlightManage
+            // listBoxFlightsManage
             // 
-            this.listBoxFlightManage.FormattingEnabled = true;
-            this.listBoxFlightManage.ItemHeight = 24;
-            this.listBoxFlightManage.Location = new System.Drawing.Point(38, 28);
-            this.listBoxFlightManage.Name = "listBoxFlightManage";
-            this.listBoxFlightManage.Size = new System.Drawing.Size(754, 196);
-            this.listBoxFlightManage.TabIndex = 0;
+            this.listBoxFlightsManage.FormattingEnabled = true;
+            this.listBoxFlightsManage.ItemHeight = 24;
+            this.listBoxFlightsManage.Location = new System.Drawing.Point(38, 28);
+            this.listBoxFlightsManage.Name = "listBoxFlightsManage";
+            this.listBoxFlightsManage.Size = new System.Drawing.Size(754, 196);
+            this.listBoxFlightsManage.TabIndex = 0;
             // 
             // labelFlightId
             // 
             this.labelFlightId.AutoSize = true;
             this.labelFlightId.Location = new System.Drawing.Point(68, 284);
             this.labelFlightId.Name = "labelFlightId";
-            this.labelFlightId.Size = new System.Drawing.Size(80, 25);
+            this.labelFlightId.Size = new System.Drawing.Size(76, 24);
             this.labelFlightId.TabIndex = 1;
             this.labelFlightId.Text = "Flight Id";
             // 
@@ -76,7 +76,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelAirlineId.AutoSize = true;
             this.labelAirlineId.Location = new System.Drawing.Point(452, 285);
             this.labelAirlineId.Name = "labelAirlineId";
-            this.labelAirlineId.Size = new System.Drawing.Size(90, 25);
+            this.labelAirlineId.Size = new System.Drawing.Size(85, 24);
             this.labelAirlineId.TabIndex = 3;
             this.labelAirlineId.Text = "Airline ID";
             // 
@@ -92,7 +92,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelDepartureAirport.AutoSize = true;
             this.labelDepartureAirport.Location = new System.Drawing.Point(68, 402);
             this.labelDepartureAirport.Name = "labelDepartureAirport";
-            this.labelDepartureAirport.Size = new System.Drawing.Size(160, 25);
+            this.labelDepartureAirport.Size = new System.Drawing.Size(153, 24);
             this.labelDepartureAirport.TabIndex = 5;
             this.labelDepartureAirport.Text = "Departure Airport";
             // 
@@ -108,7 +108,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelDestinationAirport.AutoSize = true;
             this.labelDestinationAirport.Location = new System.Drawing.Point(452, 402);
             this.labelDestinationAirport.Name = "labelDestinationAirport";
-            this.labelDestinationAirport.Size = new System.Drawing.Size(171, 25);
+            this.labelDestinationAirport.Size = new System.Drawing.Size(162, 24);
             this.labelDestinationAirport.TabIndex = 7;
             this.labelDestinationAirport.Text = "Destination Airport";
             // 
@@ -124,7 +124,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelFlightDate.AutoSize = true;
             this.labelFlightDate.Location = new System.Drawing.Point(68, 485);
             this.labelFlightDate.Name = "labelFlightDate";
-            this.labelFlightDate.Size = new System.Drawing.Size(105, 25);
+            this.labelFlightDate.Size = new System.Drawing.Size(99, 24);
             this.labelFlightDate.TabIndex = 9;
             this.labelFlightDate.Text = "Flight Date";
             // 
@@ -133,7 +133,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelPrice.AutoSize = true;
             this.labelPrice.Location = new System.Drawing.Point(463, 485);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(56, 25);
+            this.labelPrice.Size = new System.Drawing.Size(53, 24);
             this.labelPrice.TabIndex = 10;
             this.labelPrice.Text = "Price";
             // 
@@ -188,7 +188,7 @@ namespace ProjectTeam02AirlineBooking
             this.Controls.Add(this.labelAirlineId);
             this.Controls.Add(this.textBoxFlightId);
             this.Controls.Add(this.labelFlightId);
-            this.Controls.Add(this.listBoxFlightManage);
+            this.Controls.Add(this.listBoxFlightsManage);
             this.Name = "FlightInfoAddOrEditForm";
             this.Text = "FlightInfoAddOrEditForm";
             this.ResumeLayout(false);
@@ -198,7 +198,7 @@ namespace ProjectTeam02AirlineBooking
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBoxFlightManage;
+        private System.Windows.Forms.ListBox listBoxFlightsManage;
         private System.Windows.Forms.Label labelFlightId;
         private System.Windows.Forms.TextBox textBoxFlightId;
         private System.Windows.Forms.Label labelAirlineId;

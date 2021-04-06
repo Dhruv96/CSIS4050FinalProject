@@ -49,7 +49,7 @@ namespace ProjectTeam02AirlineBooking
         {
             this.Visible = false;
 
-            ManageFlightsForm manageFlightsForm = new ManageFlightsForm();
+            ManageFlightForm manageFlightsForm = new ManageFlightForm();
 
             manageFlightsForm.ShowDialog();
 

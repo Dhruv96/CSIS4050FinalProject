@@ -20,14 +20,14 @@ namespace ProjectTeam02AirlineBooking
             InitializeComponent();
 
             this.Load += AirportsAddOrEditForm_Load;
-            listBoxAirportList.SelectedIndexChanged += (s, e) => GetAirport();
+            listBoxAirportsList.SelectedIndexChanged += (s, e) => GetAirport();
             buttonAirportManageAdd.Click += ButtonAirportManageAdd_Click;
             buttonAirportManageUpdate.Click += ButtonAirportManageUpdate_Click;
         }
 
         private void ButtonAirportManageUpdate_Click(object sender, EventArgs e)
         {
-            if (!(listBoxAirportList.SelectedItem is Airport airport)) 
+            if (!(listBoxAirportsList.SelectedItem is Airport airport)) 
             {
                 MessageBox.Show("Airport to be updated must be selected");
                 return;
@@ -83,7 +83,7 @@ namespace ProjectTeam02AirlineBooking
 
         private void GetAirport() 
         {
-            if (!(listBoxAirportList.SelectedItem is Airport airport))
+            if (!(listBoxAirportsList.SelectedItem is Airport airport))
                 return;
 
             textBoxAirportIdManage.Text = airport.AirportId.ToString();
@@ -93,10 +93,10 @@ namespace ProjectTeam02AirlineBooking
         private void AirportsAddOrEditForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();
-            listBoxAirportList.DataSource = Controller<AirlineEntities, Airport>.SetBindingList();
+            listBoxAirportsList.DataSource = Controller<AirlineEntities, Airport>.SetBindingList();
             textBoxAirportIdManage.ResetText();
             textBoxAirportNameManage.ResetText();
-            listBoxAirportList.SelectedIndex = -1;
+            listBoxAirportsList.SelectedIndex = -1;
         }
     }
 }

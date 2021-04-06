@@ -30,7 +30,7 @@ namespace ProjectTeam02AirlineBooking
         private void InitializeComponent()
         {
             this.labelAirportMangeList = new System.Windows.Forms.Label();
-            this.listBoxAirportList = new System.Windows.Forms.ListBox();
+            this.listBoxAirportsList = new System.Windows.Forms.ListBox();
             this.labelAirportIdManage = new System.Windows.Forms.Label();
             this.textBoxAirportIdManage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,25 +44,25 @@ namespace ProjectTeam02AirlineBooking
             this.labelAirportMangeList.AutoSize = true;
             this.labelAirportMangeList.Location = new System.Drawing.Point(39, 38);
             this.labelAirportMangeList.Name = "labelAirportMangeList";
-            this.labelAirportMangeList.Size = new System.Drawing.Size(138, 44);
+            this.labelAirportMangeList.Size = new System.Drawing.Size(74, 24);
             this.labelAirportMangeList.TabIndex = 0;
             this.labelAirportMangeList.Text = "Airports";
             // 
-            // listBoxAirportList
+            // listBoxAirportsList
             // 
-            this.listBoxAirportList.FormattingEnabled = true;
-            this.listBoxAirportList.ItemHeight = 24;
-            this.listBoxAirportList.Location = new System.Drawing.Point(44, 86);
-            this.listBoxAirportList.Name = "listBoxAirportList";
-            this.listBoxAirportList.Size = new System.Drawing.Size(503, 292);
-            this.listBoxAirportList.TabIndex = 1;
+            this.listBoxAirportsList.FormattingEnabled = true;
+            this.listBoxAirportsList.ItemHeight = 24;
+            this.listBoxAirportsList.Location = new System.Drawing.Point(44, 86);
+            this.listBoxAirportsList.Name = "listBoxAirportsList";
+            this.listBoxAirportsList.Size = new System.Drawing.Size(503, 292);
+            this.listBoxAirportsList.TabIndex = 1;
             // 
             // labelAirportIdManage
             // 
             this.labelAirportIdManage.AutoSize = true;
             this.labelAirportIdManage.Location = new System.Drawing.Point(79, 420);
             this.labelAirportIdManage.Name = "labelAirportIdManage";
-            this.labelAirportIdManage.Size = new System.Drawing.Size(93, 25);
+            this.labelAirportIdManage.Size = new System.Drawing.Size(87, 24);
             this.labelAirportIdManage.TabIndex = 2;
             this.labelAirportIdManage.Text = "Airport ID";
             // 
@@ -78,7 +78,7 @@ namespace ProjectTeam02AirlineBooking
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(79, 473);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 25);
+            this.label1.Size = new System.Drawing.Size(121, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Airport Name";
             // 
@@ -118,7 +118,7 @@ namespace ProjectTeam02AirlineBooking
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxAirportIdManage);
             this.Controls.Add(this.labelAirportIdManage);
-            this.Controls.Add(this.listBoxAirportList);
+            this.Controls.Add(this.listBoxAirportsList);
             this.Controls.Add(this.labelAirportMangeList);
             this.Name = "AirportsAddOrEditForm";
             this.Text = "AirportsAddOrEditForm";
@@ -130,7 +130,7 @@ namespace ProjectTeam02AirlineBooking
         #endregion
 
         private System.Windows.Forms.Label labelAirportMangeList;
-        private System.Windows.Forms.ListBox listBoxAirportList;
+        private System.Windows.Forms.ListBox listBoxAirportsList;
         private System.Windows.Forms.Label labelAirportIdManage;
         private System.Windows.Forms.TextBox textBoxAirportIdManage;
         private System.Windows.Forms.Label label1;

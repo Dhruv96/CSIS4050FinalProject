@@ -20,14 +20,14 @@ namespace ProjectTeam02AirlineBooking
             InitializeComponent();
 
             this.Load += FlightInfoAddOrEditForm_Load;
-            listBoxFlightManage.SelectedIndexChanged += (s,e) => GetFlights();
+            listBoxFlightsManage.SelectedIndexChanged += (s,e) => GetFlights();
             buttonFlightAdd.Click += ButtonFlightAdd_Click;
             buttonFlightUpdate.Click += ButtonFlightUpdate_Click;
         }
 
         private void ButtonFlightUpdate_Click(object sender, EventArgs e)
         {
-            if (!(listBoxFlightManage.SelectedItem is Flight flight)) 
+            if (!(listBoxFlightsManage.SelectedItem is Flight flight)) 
             {
                 MessageBox.Show("Flight to be updated must be selected");
                 return;
@@ -93,7 +93,7 @@ namespace ProjectTeam02AirlineBooking
 
         private void GetFlights() 
         {
-            if (!(listBoxFlightManage.SelectedItem is Flight flight))
+            if (!(listBoxFlightsManage.SelectedItem is Flight flight))
                 return;
 
             textBoxFlightId.Text = flight.FlightId.ToString();
@@ -108,14 +108,14 @@ namespace ProjectTeam02AirlineBooking
         private void FlightInfoAddOrEditForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();
-            listBoxFlightManage.DataSource = Controller<AirlineEntities, Flight>.SetBindingList();
+            listBoxFlightsManage.DataSource = Controller<AirlineEntities, Flight>.SetBindingList();
             textBoxAirlineId.ResetText();
             textBoxFlightId.ResetText();
             textBoxDepartureAirport.ResetText();
             textBoxDestinationAirport.ResetText();
             textBoxPrice.ResetText();
             dateTimePickerFlightDate.ResetText();
-            listBoxFlightManage.SelectedIndex = -1;
+            listBoxFlightsManage.SelectedIndex = -1;
         
         }
     }

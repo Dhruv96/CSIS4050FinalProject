@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectTeam02AirlineBooking
 {
-    public partial class ManageFlightsForm : Form
+    public partial class ManageFlightForm : Form
     {
-        public ManageFlightsForm()
+        public ManageFlightForm()
         {
             InitializeComponent();
 

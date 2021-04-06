@@ -36,7 +36,7 @@ namespace ProjectTeam02AirlineBooking
             this.buttonAirlineManageAdd = new System.Windows.Forms.Button();
             this.buttonAirlineManageUpdate = new System.Windows.Forms.Button();
             this.labelAirlines = new System.Windows.Forms.Label();
-            this.listBoxAirlinesManageList = new System.Windows.Forms.ListBox();
+            this.listBoxAirlineManageList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // labelAirlineIdManage
@@ -44,7 +44,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelAirlineIdManage.AutoSize = true;
             this.labelAirlineIdManage.Location = new System.Drawing.Point(31, 311);
             this.labelAirlineIdManage.Name = "labelAirlineIdManage";
-            this.labelAirlineIdManage.Size = new System.Drawing.Size(90, 25);
+            this.labelAirlineIdManage.Size = new System.Drawing.Size(85, 24);
             this.labelAirlineIdManage.TabIndex = 1;
             this.labelAirlineIdManage.Text = "Airline ID";
             // 
@@ -60,7 +60,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelAirlineNameManage.AutoSize = true;
             this.labelAirlineNameManage.Location = new System.Drawing.Point(31, 371);
             this.labelAirlineNameManage.Name = "labelAirlineNameManage";
-            this.labelAirlineNameManage.Size = new System.Drawing.Size(123, 25);
+            this.labelAirlineNameManage.Size = new System.Drawing.Size(119, 24);
             this.labelAirlineNameManage.TabIndex = 3;
             this.labelAirlineNameManage.Text = "Airline Name";
             // 
@@ -94,25 +94,25 @@ namespace ProjectTeam02AirlineBooking
             this.labelAirlines.AutoSize = true;
             this.labelAirlines.Location = new System.Drawing.Point(22, 27);
             this.labelAirlines.Name = "labelAirlines";
-            this.labelAirlines.Size = new System.Drawing.Size(76, 25);
+            this.labelAirlines.Size = new System.Drawing.Size(72, 24);
             this.labelAirlines.TabIndex = 7;
             this.labelAirlines.Text = "Airlines";
             // 
-            // listBoxAirlinesManageList
+            // listBoxAirlineManageList
             // 
-            this.listBoxAirlinesManageList.FormattingEnabled = true;
-            this.listBoxAirlinesManageList.ItemHeight = 24;
-            this.listBoxAirlinesManageList.Location = new System.Drawing.Point(27, 74);
-            this.listBoxAirlinesManageList.Name = "listBoxAirlinesManageList";
-            this.listBoxAirlinesManageList.Size = new System.Drawing.Size(422, 220);
-            this.listBoxAirlinesManageList.TabIndex = 8;
+            this.listBoxAirlineManageList.FormattingEnabled = true;
+            this.listBoxAirlineManageList.ItemHeight = 24;
+            this.listBoxAirlineManageList.Location = new System.Drawing.Point(27, 74);
+            this.listBoxAirlineManageList.Name = "listBoxAirlineManageList";
+            this.listBoxAirlineManageList.Size = new System.Drawing.Size(422, 220);
+            this.listBoxAirlineManageList.TabIndex = 8;
             // 
             // AirlinesAddOrEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 628);
-            this.Controls.Add(this.listBoxAirlinesManageList);
+            this.Controls.Add(this.listBoxAirlineManageList);
             this.Controls.Add(this.labelAirlines);
             this.Controls.Add(this.buttonAirlineManageUpdate);
             this.Controls.Add(this.buttonAirlineManageAdd);
@@ -135,6 +135,6 @@ namespace ProjectTeam02AirlineBooking
         private System.Windows.Forms.Button buttonAirlineManageAdd;
         private System.Windows.Forms.Button buttonAirlineManageUpdate;
         private System.Windows.Forms.Label labelAirlines;
-        private System.Windows.Forms.ListBox listBoxAirlinesManageList;
+        private System.Windows.Forms.ListBox listBoxAirlineManageList;
     }
 }

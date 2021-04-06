@@ -21,7 +21,7 @@ namespace ProjectTeam02AirlineBooking
 
             this.Load += AirlinesAddOrEditForm_Load;
 
-            listBoxAirlinesManageList.SelectedIndexChanged += (s, e) => GetAirlines();
+            listBoxAirlineManageList.SelectedIndexChanged += (s, e) => GetAirlines();
             buttonAirlineManageAdd.Click += ButtonAirlineManageAdd_Click;
             buttonAirlineManageUpdate.Click += ButtonAirlineManageUpdate_Click;
 
@@ -29,7 +29,7 @@ namespace ProjectTeam02AirlineBooking
 
         private void ButtonAirlineManageUpdate_Click(object sender, EventArgs e)
         {
-            if (!(listBoxAirlinesManageList.SelectedItem is Airline airline)) 
+            if (!(listBoxAirlineManageList.SelectedItem is Airline airline)) 
             {
                 MessageBox.Show("Airline to be updated must be selected");
                 return;
@@ -85,15 +85,15 @@ namespace ProjectTeam02AirlineBooking
         private void AirlinesAddOrEditForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();
-            listBoxAirlinesManageList.DataSource = Controller<AirlineEntities, Airline>.SetBindingList();
+            listBoxAirlineManageList.DataSource = Controller<AirlineEntities, Airline>.SetBindingList();
             textBoxAirlineIdManage.ResetText();
             textBoxAirlineNameManage.ResetText();
-            listBoxAirlinesManageList.SelectedIndex = -1;
+            listBoxAirlineManageList.SelectedIndex = -1;
         }
 
         private void GetAirlines() 
         {
-            if (!(listBoxAirlinesManageList.SelectedItem is Airline airline))
+            if (!(listBoxAirlineManageList.SelectedItem is Airline airline))
                 return;
 
             textBoxAirlineIdManage.Text = airline.AirlineId.ToString();

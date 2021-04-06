@@ -21,7 +21,7 @@ namespace ProjectTeam02AirlineBooking
             InitializeComponent();
 
             this.Load += ManageBookingsForm_Load;
-            listBoxBookingManage.SelectedIndexChanged += (s, e) => GetBooking();
+            listBoxBookingsManage.SelectedIndexChanged += (s, e) => GetBooking();
             buttonUpdateBookingManage.Click += ButtonUpdateBookingManage_Click;
 
 
@@ -29,7 +29,7 @@ namespace ProjectTeam02AirlineBooking
 
         private void ButtonUpdateBookingManage_Click(object sender, EventArgs e)
         {
-            if (!(listBoxBookingManage.SelectedItem is Booking booking)) 
+            if (!(listBoxBookingsManage.SelectedItem is Booking booking)) 
             {
                 MessageBox.Show("Booking to be updated must be selected");
                 return;
@@ -67,7 +67,7 @@ namespace ProjectTeam02AirlineBooking
 
         private void GetBooking() 
         {
-            if (!(listBoxBookingManage.SelectedItem is Booking booking))
+            if (!(listBoxBookingsManage.SelectedItem is Booking booking))
                 return;
             textBoxBookingIdManage.Text = booking.BookingId.ToString();
             textBoxPassengerIdManage.Text = booking.PassengerId.ToString();
@@ -80,14 +80,14 @@ namespace ProjectTeam02AirlineBooking
         private void ManageBookingsForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();
-            listBoxBookingManage.DataSource = Controller<AirlineEntities, Booking>.SetBindingList();
+            listBoxBookingsManage.DataSource = Controller<AirlineEntities, Booking>.SetBindingList();
             textBoxBookingIdManage.ResetText();
             textBoxPassengerIdManage.ResetText();
             textBoxBaggageFeeManage.ResetText();
             textBoxServiceFeeBookingManage.ResetText();
             textBoxTotalFeeBookingManage.ResetText();
             textBoxIsRoundTripBookingManage.ResetText();
-            listBoxBookingManage.SelectedIndex = -1;
+            listBoxBookingsManage.SelectedIndex = -1;
         }
     }
 }

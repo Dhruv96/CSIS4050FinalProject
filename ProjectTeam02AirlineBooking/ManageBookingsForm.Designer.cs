@@ -30,7 +30,7 @@ namespace ProjectTeam02AirlineBooking
         private void InitializeComponent()
         {
             this.labelBookingManageList = new System.Windows.Forms.Label();
-            this.listBoxBookingManage = new System.Windows.Forms.ListBox();
+            this.listBoxBookingsManage = new System.Windows.Forms.ListBox();
             this.labelBookingIdManage = new System.Windows.Forms.Label();
             this.textBoxBookingIdManage = new System.Windows.Forms.TextBox();
             this.labelPassengerIdManage = new System.Windows.Forms.Label();
@@ -51,25 +51,25 @@ namespace ProjectTeam02AirlineBooking
             this.labelBookingManageList.AutoSize = true;
             this.labelBookingManageList.Location = new System.Drawing.Point(45, 60);
             this.labelBookingManageList.Name = "labelBookingManageList";
-            this.labelBookingManageList.Size = new System.Drawing.Size(145, 44);
+            this.labelBookingManageList.Size = new System.Drawing.Size(79, 24);
             this.labelBookingManageList.TabIndex = 0;
             this.labelBookingManageList.Text = "Booking";
             // 
-            // listBoxBookingManage
+            // listBoxBookingsManage
             // 
-            this.listBoxBookingManage.FormattingEnabled = true;
-            this.listBoxBookingManage.ItemHeight = 24;
-            this.listBoxBookingManage.Location = new System.Drawing.Point(50, 102);
-            this.listBoxBookingManage.Name = "listBoxBookingManage";
-            this.listBoxBookingManage.Size = new System.Drawing.Size(888, 244);
-            this.listBoxBookingManage.TabIndex = 1;
+            this.listBoxBookingsManage.FormattingEnabled = true;
+            this.listBoxBookingsManage.ItemHeight = 24;
+            this.listBoxBookingsManage.Location = new System.Drawing.Point(50, 102);
+            this.listBoxBookingsManage.Name = "listBoxBookingsManage";
+            this.listBoxBookingsManage.Size = new System.Drawing.Size(888, 244);
+            this.listBoxBookingsManage.TabIndex = 1;
             // 
             // labelBookingIdManage
             // 
             this.labelBookingIdManage.AutoSize = true;
             this.labelBookingIdManage.Location = new System.Drawing.Point(45, 383);
             this.labelBookingIdManage.Name = "labelBookingIdManage";
-            this.labelBookingIdManage.Size = new System.Drawing.Size(107, 25);
+            this.labelBookingIdManage.Size = new System.Drawing.Size(101, 24);
             this.labelBookingIdManage.TabIndex = 2;
             this.labelBookingIdManage.Text = "Booking ID";
             // 
@@ -85,7 +85,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelPassengerIdManage.AutoSize = true;
             this.labelPassengerIdManage.Location = new System.Drawing.Point(344, 383);
             this.labelPassengerIdManage.Name = "labelPassengerIdManage";
-            this.labelPassengerIdManage.Size = new System.Drawing.Size(130, 25);
+            this.labelPassengerIdManage.Size = new System.Drawing.Size(122, 24);
             this.labelPassengerIdManage.TabIndex = 4;
             this.labelPassengerIdManage.Text = "Passenger ID";
             // 
@@ -101,7 +101,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelBaggageFeeBookingManage.AutoSize = true;
             this.labelBaggageFeeBookingManage.Location = new System.Drawing.Point(659, 387);
             this.labelBaggageFeeBookingManage.Name = "labelBaggageFeeBookingManage";
-            this.labelBaggageFeeBookingManage.Size = new System.Drawing.Size(130, 25);
+            this.labelBaggageFeeBookingManage.Size = new System.Drawing.Size(125, 24);
             this.labelBaggageFeeBookingManage.TabIndex = 6;
             this.labelBaggageFeeBookingManage.Text = "Baggage Fee";
             // 
@@ -117,7 +117,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelServiceFeeBookingManage.AutoSize = true;
             this.labelServiceFeeBookingManage.Location = new System.Drawing.Point(45, 431);
             this.labelServiceFeeBookingManage.Name = "labelServiceFeeBookingManage";
-            this.labelServiceFeeBookingManage.Size = new System.Drawing.Size(117, 25);
+            this.labelServiceFeeBookingManage.Size = new System.Drawing.Size(112, 24);
             this.labelServiceFeeBookingManage.TabIndex = 8;
             this.labelServiceFeeBookingManage.Text = "Service Fee";
             // 
@@ -133,7 +133,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelTotalFeeBookingManage.AutoSize = true;
             this.labelTotalFeeBookingManage.Location = new System.Drawing.Point(344, 435);
             this.labelTotalFeeBookingManage.Name = "labelTotalFeeBookingManage";
-            this.labelTotalFeeBookingManage.Size = new System.Drawing.Size(186, 44);
+            this.labelTotalFeeBookingManage.Size = new System.Drawing.Size(101, 24);
             this.labelTotalFeeBookingManage.TabIndex = 10;
             this.labelTotalFeeBookingManage.Text = "Totoal Fee";
             // 
@@ -149,7 +149,7 @@ namespace ProjectTeam02AirlineBooking
             this.labelIsRoundTripBookingManage.AutoSize = true;
             this.labelIsRoundTripBookingManage.Location = new System.Drawing.Point(664, 435);
             this.labelIsRoundTripBookingManage.Name = "labelIsRoundTripBookingManage";
-            this.labelIsRoundTripBookingManage.Size = new System.Drawing.Size(207, 44);
+            this.labelIsRoundTripBookingManage.Size = new System.Drawing.Size(113, 24);
             this.labelIsRoundTripBookingManage.TabIndex = 12;
             this.labelIsRoundTripBookingManage.Text = "IsRoundTrip";
             // 
@@ -187,7 +187,7 @@ namespace ProjectTeam02AirlineBooking
             this.Controls.Add(this.labelPassengerIdManage);
             this.Controls.Add(this.textBoxBookingIdManage);
             this.Controls.Add(this.labelBookingIdManage);
-            this.Controls.Add(this.listBoxBookingManage);
+            this.Controls.Add(this.listBoxBookingsManage);
             this.Controls.Add(this.labelBookingManageList);
             this.Name = "ManageBookingsForm";
             this.Text = "ManageBookingsForm";
@@ -199,7 +199,7 @@ namespace ProjectTeam02AirlineBooking
         #endregion
 
         private System.Windows.Forms.Label labelBookingManageList;
-        private System.Windows.Forms.ListBox listBoxBookingManage;
+        private System.Windows.Forms.ListBox listBoxBookingsManage;
         private System.Windows.Forms.Label labelBookingIdManage;
         private System.Windows.Forms.TextBox textBoxBookingIdManage;
         private System.Windows.Forms.Label labelPassengerIdManage;
