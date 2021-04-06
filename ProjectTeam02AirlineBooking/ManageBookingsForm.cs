@@ -40,13 +40,13 @@ namespace ProjectTeam02AirlineBooking
             booking.BaggageFee = int.Parse(textBoxBaggageFeeManage.Text);
             booking.ServiceFee = int.Parse(textBoxServiceFeeBookingManage.Text);
             booking.TotalFee = int.Parse(textBoxTotalFeeBookingManage.Text);
-            booking.isRoundTrip = bool.Parse(textBoxIsRoundTripBookingManage.Text);
+          //  booking.isRoundTrip = bool.Parse(textBoxIsRoundTripBookingManage.Text);
 
             if (booking.BookingId != null && booking.PassengerId != null && booking.BaggageFee != null &&
-                booking.ServiceFee != null && booking.TotalFee != null && booking.isRoundTrip != null &&
+                booking.ServiceFee != null && booking.TotalFee != null  &&
                 booking.BookingId.ToString().Trim().Length != 0 && booking.PassengerId.ToString().Trim().Length != 0 &&
                 booking.BaggageFee.ToString().Trim().Length != 0 && booking.ServiceFee.ToString().Trim().Length != 0 &&
-                booking.TotalFee.ToString().Trim().Length != 0 && booking.isRoundTrip.ToString().Trim().Length != 0)
+                booking.TotalFee.ToString().Trim().Length != 0 )
             {
                 if (Controller<AirlineEntities, Booking>.UpdateEntity(booking) == false)
                 {
@@ -74,7 +74,7 @@ namespace ProjectTeam02AirlineBooking
             textBoxBaggageFeeManage.Text = booking.BaggageFee.ToString();
             textBoxServiceFeeBookingManage.Text = booking.ServiceFee.ToString();
             textBoxTotalFeeBookingManage.Text = booking.TotalFee.ToString();
-            textBoxIsRoundTripBookingManage.Text = booking.isRoundTrip.ToString();
+            //textBoxIsRoundTripBookingManage.Text = booking.isRoundTrip.ToString();
         }
 
         private void ManageBookingsForm_Load(object sender, EventArgs e)
