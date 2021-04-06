@@ -57,6 +57,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPageForm.Designer.cs">
+      <DependentUpon>AdminPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlinesAddOrEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlinesAddOrEditForm.Designer.cs">
+      <DependentUpon>AirlinesAddOrEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportsAddOrEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirportsAddOrEditForm.Designer.cs">
+      <DependentUpon>AirportsAddOrEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightInfoAddOrEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightInfoAddOrEditForm.Designer.cs">
+      <DependentUpon>FlightInfoAddOrEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBookingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBookingsForm.Designer.cs">
+      <DependentUpon>ManageBookingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageFlightsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageFlightsForm.Designer.cs">
+      <DependentUpon>ManageFlightsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PassengerBookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +119,27 @@
     </Compile>
     <Compile Include="AirlineBookingProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminPageForm.resx">
+      <DependentUpon>AdminPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlinesAddOrEditForm.resx">
+      <DependentUpon>AirlinesAddOrEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportsAddOrEditForm.resx">
+      <DependentUpon>AirportsAddOrEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightInfoAddOrEditForm.resx">
+      <DependentUpon>FlightInfoAddOrEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBookingsForm.resx">
+      <DependentUpon>ManageBookingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageFlightsForm.resx">
+      <DependentUpon>ManageFlightsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PassengerBookingForm.resx">
       <DependentUpon>PassengerBookingForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,15 +25,11 @@ namespace ProjectTeam02AirlineBooking
 
         private void ButtonLoginAsAdmin_Click(object sender, EventArgs e)
         {
-            this.Visible = false;           
-
+            MessageBox.Show("Test");
+            this.Hide();
             AdminPageForm adminPageForm = new AdminPageForm();
-
             adminPageForm.ShowDialog();
-
             this.Close();
-
-
         }
 
         private void ButtonLoginAsPassenger_Click(object sender, EventArgs e)
