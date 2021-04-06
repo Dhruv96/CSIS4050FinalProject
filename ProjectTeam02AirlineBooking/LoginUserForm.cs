@@ -20,6 +20,15 @@ namespace ProjectTeam02AirlineBooking
             context = new AirlineEntities();
             context.SeedDatabase();
             buttonLoginAsPassenger.Click += ButtonLoginAsPassenger_Click;
+            buttonLoginAsAdmin.Click += ButtonLoginAsAdmin_Click;
+        }
+
+        private void ButtonLoginAsAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminPageForm adminPageForm = new AdminPageForm();
+            adminPageForm.ShowDialog();
+            this.Close();
         }
 
         private void ButtonLoginAsPassenger_Click(object sender, EventArgs e)

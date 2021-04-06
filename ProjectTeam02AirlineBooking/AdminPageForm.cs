@@ -27,9 +27,9 @@ namespace ProjectTeam02AirlineBooking
         {
             this.Visible = false;
 
-            LoginForm loginForm = new LoginForm();
+            LoginUserForm loginUserForm = new LoginUserForm();
 
-            loginForm.ShowDialog();
+            loginUserForm.ShowDialog();
 
             this.Close();
         }
