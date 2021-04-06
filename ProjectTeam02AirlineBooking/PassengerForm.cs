@@ -52,9 +52,28 @@ namespace ProjectTeam02AirlineBooking
             returnDateTimePicker.TextChanged += DateTimePickerFrom_TextChanged;
             radioButtonOneWay.CheckedChanged += RadioButtonOneWay_CheckedChanged;
             radioButtonRoundTrip.CheckedChanged += RadioButtonRoundTrip_CheckedChanged;
+            buttonNext.Click += ButtonNext_Click;
             returnDateTimePicker.Enabled = false;
             InitializeDataGridView();
             LoadFlights();
+        }
+
+        private void ButtonNext_Click(object sender, EventArgs e)
+        {
+           if(dataGridViewAvailableFlights.SelectedRows.Count > 0)
+            {
+                int flightId = (int)dataGridViewAvailableFlights.SelectedRows[0].Cells[0].Value;
+                decimal price = (decimal)dataGridViewAvailableFlights.SelectedRows[0].Cells[5].Value;
+                this.Hide();
+                PassengerBookingForm passengerBookingForm = new PassengerBookingForm(flightId, price);
+                passengerBookingForm.ShowDialog();
+                this.Close();
+            }
+            
+           else
+            {
+                MessageBox.Show("Please Select a Flight");
+            }
         }
 
         private void RadioButtonRoundTrip_CheckedChanged(object sender, EventArgs e)
@@ -114,7 +133,7 @@ namespace ProjectTeam02AirlineBooking
             {
                 dataGridViewAvailableFlights.Rows.Add(flight.FlightId, flight.GetAirline(),
                    flight.GetDepartureAirport(), flight.GetDestinationAirport(), flight.FlightDate,
-                    flight.Price, flight.Seats.Count);
+                    flight.Price, flight.Seats.Count(seat => seat.isBooked == 0));
             }
         }
 
@@ -125,11 +144,13 @@ namespace ProjectTeam02AirlineBooking
             dataGridViewAvailableFlights.ReadOnly = true;  // no cell editing allowed
             dataGridViewAvailableFlights.AllowUserToAddRows = false;     // no rows can be added or deleted
             dataGridViewAvailableFlights.AllowUserToDeleteRows = false;
+            dataGridViewAvailableFlights.MultiSelect = false;
+            dataGridViewAvailableFlights.SelectionMode = DataGridViewSelectionMode.RowHeaderSelect;
             dataGridViewAvailableFlights.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAvailableFlights.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
             dataGridViewAvailableFlights.AutoSize = false;        // don't autosize the cells
-            dataGridViewAvailableFlights.RowHeadersVisible = false;
-            dataGridViewAvailableFlights.Width = 900;
+            dataGridViewAvailableFlights.RowHeadersVisible = true;
+
 
             // right justify everything
 
