@@ -31,12 +31,11 @@ namespace ProjectTeam02AirlineBooking
         {
             this.buttonManageFlights = new System.Windows.Forms.Button();
             this.buttonManageBookings = new System.Windows.Forms.Button();
-            this.buttonBackToLoginForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonManageFlights
             // 
-            this.buttonManageFlights.Location = new System.Drawing.Point(108, 49);
+            this.buttonManageFlights.Location = new System.Drawing.Point(108, 89);
             this.buttonManageFlights.Name = "buttonManageFlights";
             this.buttonManageFlights.Size = new System.Drawing.Size(104, 27);
             this.buttonManageFlights.TabIndex = 0;
@@ -45,28 +44,18 @@ namespace ProjectTeam02AirlineBooking
             // 
             // buttonManageBookings
             // 
-            this.buttonManageBookings.Location = new System.Drawing.Point(108, 109);
+            this.buttonManageBookings.Location = new System.Drawing.Point(108, 161);
             this.buttonManageBookings.Name = "buttonManageBookings";
             this.buttonManageBookings.Size = new System.Drawing.Size(104, 27);
             this.buttonManageBookings.TabIndex = 1;
             this.buttonManageBookings.Text = "Manage Bookings";
             this.buttonManageBookings.UseVisualStyleBackColor = true;
             // 
-            // buttonBackToLoginForm
-            // 
-            this.buttonBackToLoginForm.Location = new System.Drawing.Point(124, 231);
-            this.buttonBackToLoginForm.Name = "buttonBackToLoginForm";
-            this.buttonBackToLoginForm.Size = new System.Drawing.Size(75, 23);
-            this.buttonBackToLoginForm.TabIndex = 2;
-            this.buttonBackToLoginForm.Text = "Back";
-            this.buttonBackToLoginForm.UseVisualStyleBackColor = true;
-            // 
             // AdminPageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(318, 275);
-            this.Controls.Add(this.buttonBackToLoginForm);
             this.Controls.Add(this.buttonManageBookings);
             this.Controls.Add(this.buttonManageFlights);
             this.Name = "AdminPageForm";
@@ -79,6 +68,5 @@ namespace ProjectTeam02AirlineBooking
 
         private System.Windows.Forms.Button buttonManageFlights;
         private System.Windows.Forms.Button buttonManageBookings;
-        private System.Windows.Forms.Button buttonBackToLoginForm;
     }
 }

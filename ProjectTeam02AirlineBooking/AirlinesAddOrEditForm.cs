@@ -24,7 +24,15 @@ namespace ProjectTeam02AirlineBooking
             listBoxAirlineManageList.SelectedIndexChanged += (s, e) => GetAirlines();
             buttonAirlineManageAdd.Click += ButtonAirlineManageAdd_Click;
             buttonAirlineManageUpdate.Click += ButtonAirlineManageUpdate_Click;
+            this.FormClosed += AirlinesAddOrEditForm_FormClosed;
+        }
 
+        private void AirlinesAddOrEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            ManageFlightForm manageFlightForm = new ManageFlightForm();
+            manageFlightForm.ShowDialog();
+            this.Close();
         }
 
         private void ButtonAirlineManageUpdate_Click(object sender, EventArgs e)

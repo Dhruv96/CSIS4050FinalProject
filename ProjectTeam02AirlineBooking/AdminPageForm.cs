@@ -19,21 +19,7 @@ namespace ProjectTeam02AirlineBooking
             //Button click event handler
             buttonManageFlights.Click += ButtonManageFlights_Click;
             buttonManageBookings.Click += ButtonManageBookings_Click;
-            buttonBackToLoginForm.Click += ButtonBackToLoginForm_Click;
 
-        }
-
-     
-
-        private void ButtonBackToLoginForm_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-
-            LoginUserForm loginUserForm = new LoginUserForm();
-
-            loginUserForm.ShowDialog();
-
-            this.Close();
         }
         
         private void ButtonManageBookings_Click(object sender, EventArgs e)

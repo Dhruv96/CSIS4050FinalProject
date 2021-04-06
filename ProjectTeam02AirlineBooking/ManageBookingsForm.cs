@@ -23,8 +23,15 @@ namespace ProjectTeam02AirlineBooking
             this.Load += ManageBookingsForm_Load;
             listBoxBookingsManage.SelectedIndexChanged += (s, e) => GetBooking();
             buttonUpdateBookingManage.Click += ButtonUpdateBookingManage_Click;
+            this.FormClosed += ManageBookingsForm_FormClosed;
+        }
 
-
+        private void ManageBookingsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            AdminPageForm adminPageForm = new AdminPageForm();
+            adminPageForm.ShowDialog();
+            this.Close();
         }
 
         private void ButtonUpdateBookingManage_Click(object sender, EventArgs e)

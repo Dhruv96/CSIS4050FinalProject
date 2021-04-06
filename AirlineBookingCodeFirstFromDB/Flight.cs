@@ -82,5 +82,11 @@ namespace AirlineBookingCodeFirstFromDB
 
             return "";
         }
+        
+        public override string ToString()
+        {
+            return GetDepartureAirport() + "-> " + GetDestinationAirport(); 
+        }
+
     }
 }

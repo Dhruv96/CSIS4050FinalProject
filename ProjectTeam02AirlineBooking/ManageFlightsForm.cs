@@ -19,7 +19,16 @@ namespace ProjectTeam02AirlineBooking
             buttonFlightsInfo.Click += ButtonFlightsInfo_Click;
             buttonAirlinesInfo.Click += ButtonAirlinesInfo_Click;
             buttonAirportsInfo.Click += ButtonAirportsInfo_Click;
+            this.FormClosed += ManageFlightForm_FormClosed;
 
+        }
+
+        private void ManageFlightForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            AdminPageForm adminPageForm = new AdminPageForm();
+            adminPageForm.ShowDialog();
+            this.Close();
         }
 
         private void ButtonAirportsInfo_Click(object sender, EventArgs e)
