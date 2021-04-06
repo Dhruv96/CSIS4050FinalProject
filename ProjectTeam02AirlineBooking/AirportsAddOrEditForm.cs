@@ -23,6 +23,15 @@ namespace ProjectTeam02AirlineBooking
             listBoxAirportsList.SelectedIndexChanged += (s, e) => GetAirport();
             buttonAirportManageAdd.Click += ButtonAirportManageAdd_Click;
             buttonAirportManageUpdate.Click += ButtonAirportManageUpdate_Click;
+            this.FormClosed += AirportsAddOrEditForm_FormClosed;
+        }
+
+        private void AirportsAddOrEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            ManageFlightForm manageFlightForm = new ManageFlightForm();
+            manageFlightForm.ShowDialog();
+            this.Close();
         }
 
         private void ButtonAirportManageUpdate_Click(object sender, EventArgs e)
