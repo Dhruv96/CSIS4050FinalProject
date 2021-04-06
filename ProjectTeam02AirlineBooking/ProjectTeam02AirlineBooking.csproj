@@ -81,12 +81,6 @@
     <Compile Include="FlightInfoAddOrEditForm.Designer.cs">
       <DependentUpon>FlightInfoAddOrEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManageBookingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FlightInfoAddOrEditForm.resx">
       <DependentUpon>FlightInfoAddOrEditForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageBookingsForm.resx">
       <DependentUpon>ManageBookingsForm.cs</DependentUpon>
