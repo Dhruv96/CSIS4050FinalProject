@@ -609,7 +609,7 @@ namespace AirlineBookingCodeFirstFromDB
             //Bookings Sample List
             List<Booking> bookings = new List<Booking>
             {
-                new Booking{BookingId = 1, PassengerId = 1, BaggageFee = 50, ServiceFee = 10, TotalFee = 993, isRoundTrip = false},
+                new Booking{BookingId = 1, PassengerId = 1, BaggageFee = 50, ServiceFee = 10, TotalFee = 993},
             };
 
             

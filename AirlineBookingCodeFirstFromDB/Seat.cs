@@ -31,5 +31,12 @@ namespace AirlineBookingCodeFirstFromDB
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FlightBooking> FlightBookings { get; set; }
+
+        public override string ToString()
+        {
+            return "Seat num: " + SeatNum;
+        }
     }
+
+   
 }

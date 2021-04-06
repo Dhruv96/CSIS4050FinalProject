@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PassengerBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PassengerBookingForm.Designer.cs">
+      <DependentUpon>PassengerBookingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PassengerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </Compile>
     <Compile Include="AirlineBookingProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PassengerBookingForm.resx">
+      <DependentUpon>PassengerBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PassengerForm.resx">
       <DependentUpon>PassengerForm.cs</DependentUpon>
     </EmbeddedResource>

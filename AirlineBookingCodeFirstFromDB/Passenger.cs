@@ -9,7 +9,7 @@ namespace AirlineBookingCodeFirstFromDB
     [Table("Passenger")]
     public partial class Passenger
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PassengerId { get; set; }
 
         [Required]
