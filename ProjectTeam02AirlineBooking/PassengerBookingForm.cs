@@ -45,7 +45,7 @@ namespace ProjectTeam02AirlineBooking
             buttonDone.Click += ButtonDone_Click;
             labelServiceFeeNum.Text = 30.ToString();
             labelTotalFeeNum.Text = (30+flightPrice).ToString();
-            labelBaggageFeeNum.Text = 30.ToString();
+            labelBaggageFeeNum.Text = 0.ToString();
             comboBoxBaggage.SelectedIndex = 0;
             comboBoxSeats.SelectedIndex = -1;
            // SeatNum = ((Seat)comboBoxSeats.SelectedItem).SeatNum;

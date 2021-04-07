@@ -27,5 +27,11 @@ namespace AirlineBookingCodeFirstFromDB
         [Required]
         [StringLength(50)]
         public string Email { get; set; }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
     }
+
 }

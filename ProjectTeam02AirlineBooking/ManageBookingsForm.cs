@@ -14,7 +14,6 @@ namespace ProjectTeam02AirlineBooking
 {
     public partial class ManageBookingsForm : Form
     {
-        AirlineEntities context;
 
         public ManageBookingsForm()
         {
@@ -36,41 +35,48 @@ namespace ProjectTeam02AirlineBooking
 
         private void ButtonUpdateBookingManage_Click(object sender, EventArgs e)
         {
-            if (!(listBoxBookingsManage.SelectedItem is Booking booking)) 
+            if (!(listBoxBookingsManage.SelectedItem is Booking booking))
             {
                 MessageBox.Show("Booking to be updated must be selected");
                 return;
             }
+          
 
+            
             booking.BookingId = int.Parse(textBoxBookingIdManage.Text);
             booking.PassengerId = int.Parse(textBoxPassengerIdManage.Text);
-            booking.BaggageFee = int.Parse(textBoxBaggageFeeManage.Text);
-            booking.ServiceFee = int.Parse(textBoxServiceFeeBookingManage.Text);
-            booking.TotalFee = int.Parse(textBoxTotalFeeBookingManage.Text);
-          //  booking.isRoundTrip = bool.Parse(textBoxIsRoundTripBookingManage.Text);
+            booking.BaggageFee = Math.Round(decimal.Parse(textBoxBaggageFeeManage.Text), 2);
+            booking.ServiceFee = Math.Round(decimal.Parse(textBoxServiceFeeBookingManage.Text), 2);
+            booking.TotalFee = Math.Round(decimal.Parse(textBoxTotalFeeBookingManage.Text), 2);
+            //  booking.isRoundTrip = bool.Parse(textBoxIsRoundTripBookingManage.Text);
 
             if (booking.BookingId != null && booking.PassengerId != null && booking.BaggageFee != null &&
-                booking.ServiceFee != null && booking.TotalFee != null  &&
+                booking.ServiceFee != null && booking.TotalFee != null &&
                 booking.BookingId.ToString().Trim().Length != 0 && booking.PassengerId.ToString().Trim().Length != 0 &&
                 booking.BaggageFee.ToString().Trim().Length != 0 && booking.ServiceFee.ToString().Trim().Length != 0 &&
-                booking.TotalFee.ToString().Trim().Length != 0 )
+                booking.TotalFee.ToString().Trim().Length != 0)
             {
-                if (Controller<AirlineEntities, Booking>.UpdateEntity(booking) == false)
-                {
-                    MessageBox.Show("Cannot update booking to database");
-                    return;
-                }
-                this.DialogResult = DialogResult.OK;
-                Close();
-            }
-            else 
-            {
-                MessageBox.Show("Booking information is missing");
-                return;
-            }
-            
 
+                if (Controller<AirlineEntities, Booking>.UpdateEntity(booking))
+                    MessageBox.Show("Booking Updated Successfully");
+                else
+                    MessageBox.Show("Cannot Update Booking");
+            }
+            else
+            {
+                MessageBox.Show("Cannot Update Booking");
+            }
+       
+            this.DialogResult = DialogResult.OK;
+            Close();
         }
+       
+       //     else 
+        //    {
+             //   MessageBox.Show("Booking information is missing");
+//return;
+       //     }
+           
 
         private void GetBooking() 
         {
@@ -85,16 +91,17 @@ namespace ProjectTeam02AirlineBooking
         }
 
         private void ManageBookingsForm_Load(object sender, EventArgs e)
-        {
-            context = new AirlineEntities();
+        { 
             listBoxBookingsManage.DataSource = Controller<AirlineEntities, Booking>.SetBindingList();
             textBoxBookingIdManage.ResetText();
             textBoxPassengerIdManage.ResetText();
             textBoxBaggageFeeManage.ResetText();
             textBoxServiceFeeBookingManage.ResetText();
             textBoxTotalFeeBookingManage.ResetText();
-            textBoxIsRoundTripBookingManage.ResetText();
+           // textBoxIsRoundTripBookingManage.ResetText();
             listBoxBookingsManage.SelectedIndex = -1;
+            textBoxBookingIdManage.Enabled = false;
+            textBoxPassengerIdManage.Enabled = false;
         }
     }
 }

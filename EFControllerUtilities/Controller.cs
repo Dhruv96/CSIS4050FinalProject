@@ -268,9 +268,10 @@ namespace EFControllerUtilities
                 context.SaveChanges();
                 result = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 result = false;
+                Debug.WriteLine(ex.Message);
             }
 
             Debug.WriteLine($"\tDeleteEntity<{typeof(E)}>({typeof(C)}, [{entity}]) returns {result}");
