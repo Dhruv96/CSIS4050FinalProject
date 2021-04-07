@@ -33,10 +33,10 @@ namespace ProjectTeam02AirlineBooking
 
         private void ButtonLoginAsPassenger_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Hide();
             PassengerForm passengerForm = new PassengerForm();
             passengerForm.ShowDialog();
-            this.Close();
+           // this.Close();
         }
     }
 }

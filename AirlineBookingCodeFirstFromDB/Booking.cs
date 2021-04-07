@@ -5,6 +5,7 @@ namespace AirlineBookingCodeFirstFromDB
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using EFControllerUtilities;
 
     [Table("Booking")]
     public partial class Booking
@@ -36,5 +37,23 @@ namespace AirlineBookingCodeFirstFromDB
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FlightBooking> FlightBookings { get; set; }
+
+        public String GetPassenger()
+        {
+            var passengers = Controller<AirlineEntities, Passenger>.SetBindingList();
+            foreach(Passenger p in passengers)
+            {
+                if (PassengerId == p.PassengerId)
+                    return p.ToString();
+                else
+                    continue;
+            }
+            return "";
+        }
+
+        public override string ToString()
+        {
+            return "Booking Id: " + BookingId + " Passenger Details: " + GetPassenger();
+        }
     }
 }

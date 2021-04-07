@@ -47,7 +47,7 @@ namespace ProjectTeam02AirlineBooking
             flight.DepartureAirport = int.Parse(textBoxDepartureAirport.Text);
             flight.DestinationAirport = int.Parse(textBoxDestinationAirport.Text);
             flight.FlightDate = dateTimePickerFlightDate.Value;
-            flight.Price = int.Parse(textBoxPrice.Text);
+            flight.Price = Math.Round(decimal.Parse(textBoxPrice.Text),2);
 
             if (flight.FlightId != null && flight.AirlineId != null && flight.DepartureAirport != null &&
                  flight.DestinationAirport != null && flight.FlightDate != null && flight.Price != null &&
