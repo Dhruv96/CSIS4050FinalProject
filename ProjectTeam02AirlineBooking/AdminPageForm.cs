@@ -38,13 +38,41 @@ namespace ProjectTeam02AirlineBooking
                 DataSetName = "AirlinesDBDataset",
             };
 
+            string connectionString = AirlinesDB.GetConnectionString("AirlinesDBConnection");
+            AirlinesDB.OpenConnection(connectionString); // connecting to database
+
+            InitializeDatasets();
+
             //Button click event handlers
             buttonManageFlights.Click += ButtonManageFlights_Click;
             buttonManageBookings.Click += ButtonManageBookings_Click;
             buttonBackupDB.Click += ButtonBackupDB_Click;
-            buttonRestoreDB.Click += ButtonRestoreDB_Click;
             buttonGetReports.Click += ButtonGetReports_Click;
         }
+
+        /// <summary>
+        /// This function initializes the dataset used to perform backup and restore
+        /// </summary>
+        private void InitializeDatasets() {
+            DataTable airlines =  AirlinesDB.GetDataTable("Airline");
+            DataTable airports = AirlinesDB.GetDataTable("Airport");
+            DataTable bookings = AirlinesDB.GetDataTable("Booking");
+            DataTable flights = AirlinesDB.GetDataTable("Flight");
+            DataTable flightBookings = AirlinesDB.GetDataTable("FlightBooking");
+            DataTable passengers = AirlinesDB.GetDataTable("Passenger");
+            DataTable seats = AirlinesDB.GetDataTable("Seat");
+
+          
+            AirlinesDbDataset.Tables.Add(airlines);
+            AirlinesDbDataset.Tables.Add(airports);
+            AirlinesDbDataset.Tables.Add(bookings);
+            AirlinesDbDataset.Tables.Add(flights);
+            AirlinesDbDataset.Tables.Add(flightBookings);
+            AirlinesDbDataset.Tables.Add(passengers);
+            AirlinesDbDataset.Tables.Add(seats);     
+
+        }
+
 
         /// <summary>
         /// This function is called when get reports button is clicked
@@ -58,25 +86,14 @@ namespace ProjectTeam02AirlineBooking
         }
 
         /// <summary>
-        /// This function is called when restore db button is clicked
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ButtonRestoreDB_Click(object sender, EventArgs e)
-        {
-            //Restoring DB
-            AirlinesDB.RestoreDataSetFromBackup(AirlinesDbDataset);
-            MessageBox.Show("Successfully restored Database");
-        }
-
-        /// <summary>
-        /// This functioon is called when backup db button is clicked
+        /// This function is called when backup db button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void ButtonBackupDB_Click(object sender, EventArgs e)
         {
             //Backing up DB
+           // InitializeDatasets();
             AirlinesDB.BackupDataSetToXML(AirlinesDbDataset);
             MessageBox.Show("Successfully backed up Database");
         }
@@ -88,14 +105,14 @@ namespace ProjectTeam02AirlineBooking
         /// <param name="e"></param>
         private void ButtonManageBookings_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+             this.Visible = false;
 
             //Opening Manage Bookings form
             ManageBookingsForm manageBookingsForm = new ManageBookingsForm();
 
             manageBookingsForm.ShowDialog();
 
-            this.Close();
+            
         }
 
         /// <summary>
@@ -105,13 +122,13 @@ namespace ProjectTeam02AirlineBooking
         /// <param name="e"></param>
         private void ButtonManageFlights_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
+           
             // Opening manage flights form
             ManageFlightForm manageFlightsForm = new ManageFlightForm();
 
             manageFlightsForm.ShowDialog();
 
-            this.Close();
+           
         }
     }
 }

@@ -32,7 +32,6 @@ namespace ProjectTeam02AirlineBooking
             this.buttonManageFlights = new System.Windows.Forms.Button();
             this.buttonManageBookings = new System.Windows.Forms.Button();
             this.buttonBackupDB = new System.Windows.Forms.Button();
-            this.buttonRestoreDB = new System.Windows.Forms.Button();
             this.buttonGetReports = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -66,19 +65,9 @@ namespace ProjectTeam02AirlineBooking
             this.buttonBackupDB.Text = "Backup Database";
             this.buttonBackupDB.UseVisualStyleBackColor = true;
             // 
-            // buttonRestoreDB
-            // 
-            this.buttonRestoreDB.Location = new System.Drawing.Point(216, 312);
-            this.buttonRestoreDB.Margin = new System.Windows.Forms.Padding(6);
-            this.buttonRestoreDB.Name = "buttonRestoreDB";
-            this.buttonRestoreDB.Size = new System.Drawing.Size(208, 52);
-            this.buttonRestoreDB.TabIndex = 3;
-            this.buttonRestoreDB.Text = "Restore Database";
-            this.buttonRestoreDB.UseVisualStyleBackColor = true;
-            // 
             // buttonGetReports
             // 
-            this.buttonGetReports.Location = new System.Drawing.Point(216, 390);
+            this.buttonGetReports.Location = new System.Drawing.Point(216, 318);
             this.buttonGetReports.Margin = new System.Windows.Forms.Padding(6);
             this.buttonGetReports.Name = "buttonGetReports";
             this.buttonGetReports.Size = new System.Drawing.Size(208, 52);
@@ -90,9 +79,8 @@ namespace ProjectTeam02AirlineBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 529);
+            this.ClientSize = new System.Drawing.Size(636, 427);
             this.Controls.Add(this.buttonGetReports);
-            this.Controls.Add(this.buttonRestoreDB);
             this.Controls.Add(this.buttonBackupDB);
             this.Controls.Add(this.buttonManageBookings);
             this.Controls.Add(this.buttonManageFlights);
@@ -108,7 +96,6 @@ namespace ProjectTeam02AirlineBooking
         private System.Windows.Forms.Button buttonManageFlights;
         private System.Windows.Forms.Button buttonManageBookings;
         private System.Windows.Forms.Button buttonBackupDB;
-        private System.Windows.Forms.Button buttonRestoreDB;
         private System.Windows.Forms.Button buttonGetReports;
     }
 }
