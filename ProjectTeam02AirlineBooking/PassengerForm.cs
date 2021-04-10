@@ -20,21 +20,41 @@ namespace ProjectTeam02AirlineBooking
             this.Load += PassengerForm_Load;
         }
 
+        /// <summary>
+        /// This function is called when destination combobox selected item is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxDestination_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadFlights();
         }
 
+        /// <summary>
+        /// This function is called when departure combobox selected item is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxDepart_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadFlights();
         }
 
+        /// <summary>
+        /// This function is called when selected airlines in combobox is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxAirlines_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadFlights();
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PassengerForm_Load(object sender, EventArgs e)
         { 
             comboBoxAirlines.DataSource = Controller<AirlineEntities, Airline>.SetBindingList();
@@ -52,12 +72,23 @@ namespace ProjectTeam02AirlineBooking
             returnDateTimePicker.TextChanged += DateTimePickerFrom_TextChanged;
             radioButtonOneWay.CheckedChanged += RadioButtonOneWay_CheckedChanged;
             radioButtonRoundTrip.CheckedChanged += RadioButtonRoundTrip_CheckedChanged;
+            buttonCancel.Click += ButtonCancel_Click;
             buttonNext.Click += ButtonNext_Click;
             returnDateTimePicker.Enabled = false;
             InitializeDataGridView();
             LoadFlights();
         }
 
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// This function is called when next button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonNext_Click(object sender, EventArgs e)
         {
            if(dataGridViewAvailableFlights.SelectedRows.Count > 0)
@@ -76,6 +107,11 @@ namespace ProjectTeam02AirlineBooking
             }
         }
 
+        /// <summary>
+        /// This function is called when round trip radio button is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RadioButtonRoundTrip_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonRoundTrip.Checked)
@@ -86,6 +122,11 @@ namespace ProjectTeam02AirlineBooking
             LoadFlights();
         }
 
+        /// <summary>
+        /// This function is called when one way radio button is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RadioButtonOneWay_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonOneWay.Checked)
@@ -101,6 +142,10 @@ namespace ProjectTeam02AirlineBooking
             LoadFlights();
         }
 
+        /// <summary>
+        /// This function loads the flights and displays 
+        /// them in the gridview based on the user selected filters
+        /// </summary>
         private void LoadFlights()
         {
             var selectedAirline = (Airline)comboBoxAirlines.SelectedItem;
@@ -127,6 +172,7 @@ namespace ProjectTeam02AirlineBooking
                             (flight.FlightDate.CompareTo(fromDate) >= 0));
             }
           
+            // Adding flights in datagridview
             dataGridViewAvailableFlights.Rows.Clear();
 
             foreach(var flight in flights)
@@ -137,7 +183,9 @@ namespace ProjectTeam02AirlineBooking
             }
         }
 
-
+        /// <summary>
+        /// This function initializes datagridview by setting its properties
+        /// </summary>
         private void InitializeDataGridView()
         {
             dataGridViewAvailableFlights.Columns.Clear();  // any columns created by the designer, get rid of them

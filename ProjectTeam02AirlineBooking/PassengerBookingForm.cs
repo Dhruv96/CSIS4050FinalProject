@@ -16,10 +16,12 @@ namespace ProjectTeam02AirlineBooking
     public partial class PassengerBookingForm : Form
     {
         AirlineEntities context;
+        // declaring variables needed 
         int SeatNum = -1;
         float baggageFee, serviceFee = 30, totalFees;
         decimal flightPrice;
         int flightId, bookingId;
+
         public PassengerBookingForm(int flightId, decimal flightPrice)
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace ProjectTeam02AirlineBooking
             this.flightPrice = flightPrice;
             Load += PassengerBookingForm_Load;
 
+            // fetching available (not booked seats) from DB
             var seats = Controller<AirlineEntities, Seat>.
                SetBindingList().Where(seat => seat.FlightId == flightId && seat.isBooked == 0);
 
@@ -36,6 +39,11 @@ namespace ProjectTeam02AirlineBooking
             comboBoxBaggage.DataSource = baggageArray;
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PassengerBookingForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();
@@ -56,11 +64,21 @@ namespace ProjectTeam02AirlineBooking
 
         }
 
+        /// <summary>
+        /// This function is called when seat num in combo box is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxSeats_SelectedIndexChanged(object sender, EventArgs e)
         {
             SeatNum = ((Seat)comboBoxSeats.SelectedItem).SeatNum;
         }
 
+        /// <summary>
+        /// This function is called user updates the baggage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ComboBoxBaggage_SelectedIndexChanged(object sender, EventArgs e)
         {
             int noOfBags = (int)comboBoxBaggage.SelectedItem;
@@ -77,8 +95,14 @@ namespace ProjectTeam02AirlineBooking
             this.Close();
         }
 
+        /// <summary>
+        /// This function is called when user clicks add more people too booking button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddMorePeople_Click(object sender, EventArgs e)
         {
+            // this function is used to add more people in the same booking
             textBoxFname.ResetText();
             textBoxLname.ResetText();
             textBoxEmail.ResetText();
@@ -96,6 +120,11 @@ namespace ProjectTeam02AirlineBooking
             comboBoxSeats.ResetText();
         }
 
+        /// <summary>
+        /// This function is called when Add to booking button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddToBooking_Click(object sender, EventArgs e)
         {
             String Fname = textBoxFname.Text;
@@ -113,6 +142,7 @@ namespace ProjectTeam02AirlineBooking
                         Gender = radioButtonMale.Checked ? "Male" : "Female"
                     };
 
+                    // First adding the passenger in DB
                     Passenger p = Controller<AirlineEntities, Passenger>.AddEntity(passenger);
                     if (p == null)
                     {
@@ -122,13 +152,14 @@ namespace ProjectTeam02AirlineBooking
 
                     context.SaveChanges();
 
+                    // Create a booking for the passenger created above
                     Booking booking = new Booking
                     {
                         BookingId = bookingId,
                         PassengerId = p.PassengerId,
                         BaggageFee = (decimal)baggageFee,
                         ServiceFee = (decimal)serviceFee,
-                        TotalFee = (decimal)totalFees + (decimal)flightPrice 
+                        TotalFee = (decimal)baggageFee + (decimal)serviceFee + (decimal)flightPrice 
                     };
                     var book = Controller<AirlineEntities, Booking>.AddEntity(booking);
                     if (book == null)
@@ -145,6 +176,7 @@ namespace ProjectTeam02AirlineBooking
                         SeatNum = SeatNum
                     };
 
+                    // setting seat not available (booked) in seats table
                     if(Controller<AirlineEntities, Seat>.UpdateEntity(seat) == false)
                     {
                         MessageBox.Show("Unable to update seat status");
@@ -159,6 +191,7 @@ namespace ProjectTeam02AirlineBooking
                     };
 
 
+                    //Adding flight booking entity in table
                     var fB = Controller<AirlineEntities, FlightBooking>.AddEntity(flightBooking);
                     if(fB == null)
                     {
