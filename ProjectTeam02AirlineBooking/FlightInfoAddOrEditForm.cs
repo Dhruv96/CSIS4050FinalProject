@@ -19,14 +19,23 @@ namespace ProjectTeam02AirlineBooking
         {
             InitializeComponent();
 
+            // setiing load handler
             this.Load += FlightInfoAddOrEditForm_Load;
+            // setting selected index change listener
             listBoxFlightsManage.SelectedIndexChanged += (s,e) => GetFlights();
+            // setting click listeners
             buttonFlightAdd.Click += ButtonFlightAdd_Click;
             buttonFlightUpdate.Click += ButtonFlightUpdate_Click;
+            // setting form closed listeners
             this.FormClosed += FlightInfoAddOrEditForm_FormClosed;
             
         }
 
+        /// <summary>
+        /// This function is called when form is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlightInfoAddOrEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
@@ -35,6 +44,11 @@ namespace ProjectTeam02AirlineBooking
             this.Close();
         }
 
+        /// <summary>
+        /// This function is called when update button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonFlightUpdate_Click(object sender, EventArgs e)
         {
             if (!(listBoxFlightsManage.SelectedItem is Flight flight)) 
@@ -42,6 +56,7 @@ namespace ProjectTeam02AirlineBooking
                 MessageBox.Show("Flight to be updated must be selected");
                 return;
             }
+            // updating entity properties
             flight.FlightId = int.Parse(textBoxFlightId.Text);
             flight.AirlineId = int.Parse(textBoxAirlineId.Text);
             flight.DepartureAirport = int.Parse(textBoxDepartureAirport.Text);
@@ -55,6 +70,7 @@ namespace ProjectTeam02AirlineBooking
                  flight.DepartureAirport.ToString().Trim().Length != 0 && flight.DestinationAirport.ToString().Trim().Length != 0
                  && flight.FlightDate.ToString().Trim().Length != 0 && flight.Price.ToString().Trim().Length != 0)
             {
+                // updating entity
                 if (Controller<AirlineEntities, Flight>.UpdateEntity(flight) == false)
                 {
                     MessageBox.Show("Cannot update flight to database");
@@ -70,8 +86,14 @@ namespace ProjectTeam02AirlineBooking
             }
         }
 
+        /// <summary>
+        /// This function is called when Add button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonFlightAdd_Click(object sender, EventArgs e)
         {
+            // Setting properties of entity
             Flight flight = new Flight();
             flight.FlightId = int.Parse(textBoxFlightId.Text);
             flight.AirlineId = int.Parse(textBoxAirlineId.Text);
@@ -86,6 +108,7 @@ namespace ProjectTeam02AirlineBooking
                  flight.DepartureAirport.ToString().Trim().Length != 0 && flight.DestinationAirport.ToString().Trim().Length != 0
                  && flight.FlightDate.ToString().Trim().Length != 0 && flight.Price.ToString().Trim().Length != 0) 
             {
+                // Adding the entity
                 if (Controller<AirlineEntities, Flight>.AddEntity(flight) == null) 
                 {
                     MessageBox.Show("Cannot add flight info to database");
@@ -101,6 +124,11 @@ namespace ProjectTeam02AirlineBooking
             }
         }
 
+        /// <summary>
+        /// This function is called when selected index of listbox is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetFlights() 
         {
             if (!(listBoxFlightsManage.SelectedItem is Flight flight))
@@ -115,6 +143,11 @@ namespace ProjectTeam02AirlineBooking
         
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlightInfoAddOrEditForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();

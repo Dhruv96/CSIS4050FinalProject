@@ -18,15 +18,23 @@ namespace ProjectTeam02AirlineBooking
         public AirlinesAddOrEditForm()
         {
             InitializeComponent();
-
+            // Setting load listener
             this.Load += AirlinesAddOrEditForm_Load;
 
+            // setting selection index changed listener
             listBoxAirlineManageList.SelectedIndexChanged += (s, e) => GetAirlines();
+
+            //Setting click listeners
             buttonAirlineManageAdd.Click += ButtonAirlineManageAdd_Click;
             buttonAirlineManageUpdate.Click += ButtonAirlineManageUpdate_Click;
             this.FormClosed += AirlinesAddOrEditForm_FormClosed;
         }
 
+        /// <summary>
+        /// This function is called when form is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AirlinesAddOrEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
@@ -35,6 +43,11 @@ namespace ProjectTeam02AirlineBooking
             this.Close();
         }
 
+        /// <summary>
+        /// This function is called when update button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAirlineManageUpdate_Click(object sender, EventArgs e)
         {
             if (!(listBoxAirlineManageList.SelectedItem is Airline airline)) 
@@ -50,6 +63,7 @@ namespace ProjectTeam02AirlineBooking
                 && airline.AirlineId.ToString().Trim().Length != 0 &&
                 airline.AirlineName.Trim().Length != 0)
             {
+                // updating the entity
                 if (Controller<AirlineEntities, Airline>.UpdateEntity(airline) == false)
                 {
                     MessageBox.Show("Cannot update airline to database");
@@ -66,8 +80,14 @@ namespace ProjectTeam02AirlineBooking
 
         }
 
+        /// <summary>
+        /// This function is called when add button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAirlineManageAdd_Click(object sender, EventArgs e)
         {
+            // updating entity properties
             Airline airline = new Airline();
             airline.AirlineId = int.Parse(textBoxAirlineIdManage.Text);
             airline.AirlineName = textBoxAirlineNameManage.Text;
@@ -90,8 +110,14 @@ namespace ProjectTeam02AirlineBooking
                 
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AirlinesAddOrEditForm_Load(object sender, EventArgs e)
         {
+            // setting datasources and initial UI
             context = new AirlineEntities();
             listBoxAirlineManageList.DataSource = Controller<AirlineEntities, Airline>.SetBindingList();
             textBoxAirlineIdManage.ResetText();
@@ -99,8 +125,12 @@ namespace ProjectTeam02AirlineBooking
             listBoxAirlineManageList.SelectedIndex = -1;
         }
 
+       /// <summary>
+       /// This function is called when selected item in listbox is changed
+       /// </summary>
         private void GetAirlines() 
         {
+            // setting textfields when airline is selected in listbox
             if (!(listBoxAirlineManageList.SelectedItem is Airline airline))
                 return;
 

@@ -19,12 +19,22 @@ namespace ProjectTeam02AirlineBooking
         {
             InitializeComponent();
 
+            // setting form load handler
             this.Load += ManageBookingsForm_Load;
+
+            // setting listbox selectedindex change listener
             listBoxBookingsManage.SelectedIndexChanged += (s, e) => GetBooking();
+            // setting click listeners
             buttonUpdateBookingManage.Click += ButtonUpdateBookingManage_Click;
+            // setting form close listener
             this.FormClosed += ManageBookingsForm_FormClosed;
         }
 
+        /// <summary>
+        /// This function is called when form is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ManageBookingsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
@@ -33,6 +43,11 @@ namespace ProjectTeam02AirlineBooking
             this.Close();
         }
 
+        /// <summary>
+        /// This function is called when update button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonUpdateBookingManage_Click(object sender, EventArgs e)
         {
             if (!(listBoxBookingsManage.SelectedItem is Booking booking))
@@ -41,7 +56,7 @@ namespace ProjectTeam02AirlineBooking
                 return;
             }
           
-
+            // Updating the properties of entity
             
             booking.BookingId = int.Parse(textBoxBookingIdManage.Text);
             booking.PassengerId = int.Parse(textBoxPassengerIdManage.Text);
@@ -57,6 +72,7 @@ namespace ProjectTeam02AirlineBooking
                 booking.TotalFee.ToString().Trim().Length != 0)
             {
 
+                // updating the entity
                 if (Controller<AirlineEntities, Booking>.UpdateEntity(booking))
                     MessageBox.Show("Booking Updated Successfully");
                 else
@@ -70,14 +86,18 @@ namespace ProjectTeam02AirlineBooking
             this.DialogResult = DialogResult.OK;
             Close();
         }
-       
-       //     else 
-        //    {
-             //   MessageBox.Show("Booking information is missing");
-//return;
-       //     }
-           
 
+        //     else 
+        //    {
+        //   MessageBox.Show("Booking information is missing");
+        //return;
+        //     }
+
+        /// <summary>
+        /// This function is called when selected index of listbox is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetBooking() 
         {
             if (!(listBoxBookingsManage.SelectedItem is Booking booking))
@@ -90,6 +110,11 @@ namespace ProjectTeam02AirlineBooking
             //textBoxIsRoundTripBookingManage.Text = booking.isRoundTrip.ToString();
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ManageBookingsForm_Load(object sender, EventArgs e)
         { 
             listBoxBookingsManage.DataSource = Controller<AirlineEntities, Booking>.SetBindingList();
@@ -100,6 +125,9 @@ namespace ProjectTeam02AirlineBooking
             textBoxTotalFeeBookingManage.ResetText();
            // textBoxIsRoundTripBookingManage.ResetText();
             listBoxBookingsManage.SelectedIndex = -1;
+
+            // disabling these textfields as they represent 
+            // primary keys of entity which should not be changed
             textBoxBookingIdManage.Enabled = false;
             textBoxPassengerIdManage.Enabled = false;
         }

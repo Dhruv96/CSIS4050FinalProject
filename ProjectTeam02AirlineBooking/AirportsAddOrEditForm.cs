@@ -19,13 +19,21 @@ namespace ProjectTeam02AirlineBooking
         {
             InitializeComponent();
 
+            // setting load handler and selection index changed handler
             this.Load += AirportsAddOrEditForm_Load;
             listBoxAirportsList.SelectedIndexChanged += (s, e) => GetAirport();
+            // setting click handlers
             buttonAirportManageAdd.Click += ButtonAirportManageAdd_Click;
             buttonAirportManageUpdate.Click += ButtonAirportManageUpdate_Click;
+            // setting form closed handler
             this.FormClosed += AirportsAddOrEditForm_FormClosed;
         }
 
+        /// <summary>
+        /// This function is called when this form is closed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AirportsAddOrEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
@@ -33,9 +41,14 @@ namespace ProjectTeam02AirlineBooking
             manageFlightForm.ShowDialog();
             this.Close();
         }
-
+        /// <summary>
+        /// This function is called when update button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAirportManageUpdate_Click(object sender, EventArgs e)
         {
+            // updating the entity properties
             if (!(listBoxAirportsList.SelectedItem is Airport airport)) 
             {
                 MessageBox.Show("Airport to be updated must be selected");
@@ -48,6 +61,7 @@ namespace ProjectTeam02AirlineBooking
                 airport.AirportId.ToString().Trim().Length != 0 &&
                 airport.AirportName.Trim().Length != 0) 
             {
+                // updating the entitiy
                 if (Controller<AirlineEntities, Airport>.UpdateEntity(airport) == false) 
                 {
                     MessageBox.Show("Cannot update airport to database");
@@ -64,6 +78,11 @@ namespace ProjectTeam02AirlineBooking
 
         }
 
+        /// <summary>
+        /// This function is called when Add button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAirportManageAdd_Click(object sender, EventArgs e)
         {
             Airport airport = new Airport();
@@ -74,6 +93,7 @@ namespace ProjectTeam02AirlineBooking
                 airport.AirportId.ToString().Trim().Length != 0 &&
                 airport.AirportName.ToString().Trim().Length != 0)
             {
+                // adding new entity
                 if (Controller<AirlineEntities, Airport>.AddEntity(airport) == null)
                 {
                     MessageBox.Show("Cannot add airport to database");
@@ -90,6 +110,11 @@ namespace ProjectTeam02AirlineBooking
 
         }
 
+        /// <summary>
+        /// This function is called when listbox selected item is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GetAirport() 
         {
             if (!(listBoxAirportsList.SelectedItem is Airport airport))
@@ -99,6 +124,11 @@ namespace ProjectTeam02AirlineBooking
             textBoxAirportNameManage.Text = airport.AirportName;
         }
 
+        /// <summary>
+        /// This function is called when form is loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AirportsAddOrEditForm_Load(object sender, EventArgs e)
         {
             context = new AirlineEntities();

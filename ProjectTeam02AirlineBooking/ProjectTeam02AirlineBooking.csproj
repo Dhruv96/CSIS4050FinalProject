@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProjectTeam02AirlineBooking</RootNamespace>
     <AssemblyName>ProjectTeam02AirlineBooking</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="AirlineBookingProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminPageForm.resx">
       <DependentUpon>AdminPageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +156,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +181,10 @@
     <ProjectReference Include="..\AirlinesDB\AirlinesDB.sqlproj">
       <Project>{d8b904a3-478c-4399-ba30-efda541d88c3}</Project>
       <Name>AirlinesDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataTableAccessLayer\DataTableAccessLayer.csproj">
+      <Project>{62046f68-706d-4350-82d1-c205f0ec64de}</Project>
+      <Name>DataTableAccessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\EFControllerUtilities\EFControllerUtilities.csproj">
       <Project>{f7b44d6d-563a-4d6d-9718-b554924b4d97}</Project>
